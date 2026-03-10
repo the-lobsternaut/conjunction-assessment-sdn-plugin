@@ -1,0 +1,3 @@
+[submodule "src/cpp/deps/sgp4"]
+	path = src/cpp/deps/sgp4
+	url = https://github.com/dnwrnr/sgp4.git

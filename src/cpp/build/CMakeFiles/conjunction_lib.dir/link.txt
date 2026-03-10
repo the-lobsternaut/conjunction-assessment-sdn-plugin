@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconjunction_lib.a CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o
+/usr/bin/ranlib libconjunction_lib.a

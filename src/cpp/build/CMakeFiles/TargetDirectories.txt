@@ -1,0 +1,5 @@
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/sgp4_lib.dir
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/conjunction_lib.dir
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/test_socrates.dir
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/edit_cache.dir
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,97 @@
+{
+  "source": "CelesTrak SOCRATES Plus",
+  "scraped_at": "2026-03-10T14:05:00Z",
+  "data_current_as_of": "2026-03-09T18:05:34Z",
+  "computation_interval": {
+    "start": "2026-03-09T18:00:00Z",
+    "stop": "2026-03-16T18:00:00Z"
+  },
+  "threshold_km": 5.0,
+  "primaries": 14660,
+  "secondaries": 30054,
+  "total_conjunctions": 119919,
+  "sgp4_errors": 19,
+  "computation_time": "09h 46m 28.156s",
+  "conjunctions": [
+    {
+      "obj1_norad": 61721, "obj1_name": "STARLINK-32469", "obj1_status": "+", "obj1_dse": 5.075,
+      "obj2_norad": 67298, "obj2_name": "OBJECT BC", "obj2_status": "+", "obj2_dse": 5.733,
+      "tca": "2026-03-14T11:08:50.281Z",
+      "min_range_km": 0.010, "rel_speed_kms": 9.757,
+      "max_prob": 1.000, "dilution_km": 0.000,
+      "gp_file": "gp_61721,67298.txt"
+    },
+    {
+      "obj1_norad": 47935, "obj1_name": "GRUS-1E", "obj1_status": "+", "obj1_dse": 2.681,
+      "obj2_norad": 49179, "obj2_name": "STARLINK-3043", "obj2_status": "+", "obj2_dse": 2.684,
+      "tca": "2026-03-12T04:44:40.733Z",
+      "min_range_km": 0.014, "rel_speed_kms": 9.173,
+      "max_prob": 0.3343, "dilution_km": 0.004,
+      "gp_file": "gp_47935,49179.txt"
+    },
+    {
+      "obj1_norad": 48282, "obj1_name": "STARLINK-2558", "obj1_status": "+", "obj1_dse": 7.136,
+      "obj2_norad": 58288, "obj2_name": "ICEYE-X31", "obj2_status": "+", "obj2_dse": 6.872,
+      "tca": "2026-03-16T09:03:22.330Z",
+      "min_range_km": 0.014, "rel_speed_kms": 12.349,
+      "max_prob": 0.3310, "dilution_km": 0.005,
+      "gp_file": "gp_48282,58288.txt"
+    },
+    {
+      "obj1_norad": 46054, "obj1_name": "STARLINK-1548", "obj1_status": "+", "obj1_dse": 6.467,
+      "obj2_norad": 61781, "obj2_name": "ASRTU-1 (AO-123)", "obj2_status": "+", "obj2_dse": 6.417,
+      "tca": "2026-03-15T23:13:06.039Z",
+      "min_range_km": 0.013, "rel_speed_kms": 14.013,
+      "max_prob": 0.3235, "dilution_km": 0.005,
+      "gp_file": "gp_46054,61781.txt"
+    },
+    {
+      "obj1_norad": 58184, "obj1_name": "STARLINK-30801", "obj1_status": "+", "obj1_dse": 6.380,
+      "obj2_norad": 54940, "obj2_name": "CZ-6A DEB", "obj2_status": "-", "obj2_dse": 5.811,
+      "tca": "2026-03-15T01:07:39.931Z",
+      "min_range_km": 0.029, "rel_speed_kms": 8.865,
+      "max_prob": 0.1153, "dilution_km": 0.008,
+      "gp_file": "gp_58184,54940.txt"
+    },
+    {
+      "obj1_norad": 56844, "obj1_name": "STARLINK-30136", "obj1_status": "+", "obj1_dse": 4.562,
+      "obj2_norad": 64555, "obj2_name": "CONNECTA IOT-10", "obj2_status": "+", "obj2_dse": 4.746,
+      "tca": "2026-03-14T01:29:50.899Z",
+      "min_range_km": 0.030, "rel_speed_kms": 12.230,
+      "max_prob": 0.09097, "dilution_km": 0.011,
+      "gp_file": "gp_56844,64555.txt"
+    },
+    {
+      "obj1_norad": 46335, "obj1_name": "STARLINK-1727", "obj1_status": "P", "obj1_dse": 5.332,
+      "obj2_norad": 59761, "obj2_name": "STARLINK-11117", "obj2_status": "+", "obj2_dse": 5.278,
+      "tca": "2026-03-14T19:57:29.280Z",
+      "min_range_km": 0.061, "rel_speed_kms": 11.147,
+      "max_prob": 0.07876, "dilution_km": 0.020,
+      "gp_file": "gp_46335,59761.txt"
+    },
+    {
+      "obj1_norad": 60150, "obj1_name": "STARLINK-32014", "obj1_status": "+", "obj1_dse": 1.567,
+      "obj2_norad": 43771, "obj2_name": "OBJECT P", "obj2_status": "-", "obj2_dse": 2.321,
+      "tca": "2026-03-10T23:11:36.576Z",
+      "min_range_km": 0.031, "rel_speed_kms": 14.757,
+      "max_prob": 0.05748, "dilution_km": 0.017,
+      "gp_file": "gp_60150,43771.txt"
+    },
+    {
+      "obj1_norad": 57446, "obj1_name": "STARLINK-30162", "obj1_status": "+", "obj1_dse": 2.276,
+      "obj2_norad": 59806, "obj2_name": "OBJECT B", "obj2_status": "+", "obj2_dse": 2.269,
+      "tca": "2026-03-11T18:37:48.752Z",
+      "min_range_km": 0.046, "rel_speed_kms": 11.393,
+      "max_prob": 0.04243, "dilution_km": 0.015,
+      "gp_file": "gp_57446,59806.txt"
+    },
+    {
+      "obj1_norad": 64428, "obj1_name": "STARLINK-34495", "obj1_status": "+", "obj1_dse": 5.745,
+      "obj2_norad": 20608, "obj2_name": "MACSAT 2 (M 2)", "obj2_status": "?", "obj2_dse": 5.707,
+      "tca": "2026-03-15T04:50:51.304Z",
+      "min_range_km": 0.042, "rel_speed_kms": 14.912,
+      "max_prob": 0.03955, "dilution_km": 0.026,
+      "gp_file": "gp_64428,20608.txt"
+    }
+  ]
+}
