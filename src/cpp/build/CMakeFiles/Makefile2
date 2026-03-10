@@ -161,8 +161,8 @@ CMakeFiles/conjunction_lib.dir/clean:
 # Target rules for target CMakeFiles/test_socrates.dir
 
 # All Build rule for target.
-CMakeFiles/test_socrates.dir/all: CMakeFiles/conjunction_lib.dir/all
 CMakeFiles/test_socrates.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_socrates.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=27,28 "Built target test_socrates"
@@ -194,8 +194,8 @@ CMakeFiles/test_socrates.dir/clean:
 # Target rules for target CMakeFiles/test_gp_json.dir
 
 # All Build rule for target.
-CMakeFiles/test_gp_json.dir/all: CMakeFiles/conjunction_lib.dir/all
 CMakeFiles/test_gp_json.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_gp_json.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=23,24 "Built target test_gp_json"
@@ -227,8 +227,8 @@ CMakeFiles/test_gp_json.dir/clean:
 # Target rules for target CMakeFiles/test_screening.dir
 
 # All Build rule for target.
-CMakeFiles/test_screening.dir/all: CMakeFiles/conjunction_lib.dir/all
 CMakeFiles/test_screening.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_screening.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=25,26 "Built target test_screening"
@@ -260,8 +260,8 @@ CMakeFiles/test_screening.dir/clean:
 # Target rules for target CMakeFiles/test_socrates_bulk.dir
 
 # All Build rule for target.
-CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/conjunction_lib.dir/all
 CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=29,30 "Built target test_socrates_bulk"

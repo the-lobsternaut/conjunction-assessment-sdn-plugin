@@ -173,13 +173,7 @@ int main(int argc, char* argv[]) {
             continue;
         }
 
-        // Skip 6+ digit NORAD IDs (TLE format only supports 5 digits)
-        // Space-Track is developing a new format; TLE can't represent these
-        if (ref.norad1 > 99999 || ref.norad2 > 99999) {
-            skipped++;
-            failure_reasons["norad_6digit"]++;
-            continue;
-        }
+        // Alpha-5 encoding handles 6-digit NORAD IDs (100000-339999)
 
         // Try SOCRATES-epoch GP file first (exact match), fall back to catalog
         TLE tle1, tle2;

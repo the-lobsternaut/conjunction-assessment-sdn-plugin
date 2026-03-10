@@ -222,12 +222,159 @@ void test_altitude_prefilter() {
     CHECK(altitude_overlap(geo, heo), "GEO and HEO overlap (HEO passes through GEO)");
 }
 
+void test_alpha5_encoding() {
+    std::cout << "\n--- Test: Alpha-5 NORAD ID Encoding ---" << std::endl;
+
+    // Standard 5-digit IDs
+    {
+        GPElement gp{};
+        gp.norad_cat_id = 25544;
+        gp.classification_type = 'U';
+        gp.object_id = "1998-067A";
+        gp.epoch_iso = "2026-03-09T12:00:00.000000";
+        gp.mean_motion = 15.5;
+        gp.eccentricity = 0.0001;
+        gp.inclination = 51.6;
+        gp.ra_of_asc_node = 100.0;
+        gp.arg_of_pericenter = 50.0;
+        gp.mean_anomaly = 200.0;
+        gp.bstar = 0.00005;
+        gp.mean_motion_dot = 0.00001;
+        gp.mean_motion_ddot = 0.0;
+        gp.ephemeris_type = 0;
+        gp.element_set_no = 999;
+        gp.rev_at_epoch = 1000;
+        gp.epoch_jd = iso_to_jd(gp.epoch_iso);
+
+        TLE tle = gp_to_tle(gp);
+        CHECK(tle.line1.substr(2, 5) == "25544", "Standard ID 25544 in line1");
+        CHECK(tle.line2.substr(2, 5) == "25544", "Standard ID 25544 in line2");
+
+        // Verify SGP4 can parse it
+        try {
+            libsgp4::Tle sgp4_tle("ISS", tle.line1, tle.line2);
+            CHECK(sgp4_tle.NoradNumber() == 25544, "SGP4 parsed NORAD 25544");
+        } catch (const std::exception& e) {
+            CHECK(false, std::string("SGP4 parse standard ID: ") + e.what());
+        }
+    }
+
+    // Alpha-5: 100000 → A0000
+    {
+        GPElement gp{};
+        gp.norad_cat_id = 100000;
+        gp.classification_type = 'U';
+        gp.object_id = "2025-001A";
+        gp.epoch_iso = "2026-03-09T12:00:00.000000";
+        gp.mean_motion = 15.0;
+        gp.eccentricity = 0.001;
+        gp.inclination = 97.0;
+        gp.ra_of_asc_node = 150.0;
+        gp.arg_of_pericenter = 60.0;
+        gp.mean_anomaly = 300.0;
+        gp.bstar = 0.0001;
+        gp.mean_motion_dot = 0.0;
+        gp.mean_motion_ddot = 0.0;
+        gp.ephemeris_type = 0;
+        gp.element_set_no = 999;
+        gp.rev_at_epoch = 100;
+        gp.epoch_jd = iso_to_jd(gp.epoch_iso);
+
+        TLE tle = gp_to_tle(gp);
+        CHECK(tle.line1.substr(2, 5) == "A0000", "Alpha-5 ID 100000 → A0000 in line1");
+        CHECK(tle.line2.substr(2, 5) == "A0000", "Alpha-5 ID 100000 → A0000 in line2");
+
+        try {
+            libsgp4::Tle sgp4_tle("SAT", tle.line1, tle.line2);
+            CHECK(sgp4_tle.NoradNumber() == 100000, "SGP4 parsed Alpha-5 NORAD 100000");
+        } catch (const std::exception& e) {
+            CHECK(false, std::string("SGP4 parse Alpha-5 100000: ") + e.what());
+        }
+    }
+
+    // Alpha-5: 270086 → R0086 (27 → R: P=23, Q=24, R=25... wait 27-23=4, P+4=T? No...)
+    // 270086: first = 27, rest = 0086
+    // 27 >= 23 → 'P' + (27-23) = 'T'
+    // So 270086 → T0086
+    {
+        GPElement gp{};
+        gp.norad_cat_id = 270086;
+        gp.classification_type = 'U';
+        gp.object_id = "2025-999A";
+        gp.epoch_iso = "2026-03-09T12:00:00.000000";
+        gp.mean_motion = 14.5;
+        gp.eccentricity = 0.002;
+        gp.inclination = 45.0;
+        gp.ra_of_asc_node = 200.0;
+        gp.arg_of_pericenter = 90.0;
+        gp.mean_anomaly = 180.0;
+        gp.bstar = 0.0002;
+        gp.mean_motion_dot = 0.0;
+        gp.mean_motion_ddot = 0.0;
+        gp.ephemeris_type = 0;
+        gp.element_set_no = 999;
+        gp.rev_at_epoch = 50;
+        gp.epoch_jd = iso_to_jd(gp.epoch_iso);
+
+        TLE tle = gp_to_tle(gp);
+        CHECK(tle.line1.substr(2, 5) == "T0086", "Alpha-5 ID 270086 → T0086 in line1");
+        CHECK(tle.line2.substr(2, 5) == "T0086", "Alpha-5 ID 270086 → T0086 in line2");
+
+        try {
+            libsgp4::Tle sgp4_tle("SAT", tle.line1, tle.line2);
+            CHECK(sgp4_tle.NoradNumber() == 270086, "SGP4 parsed Alpha-5 NORAD 270086");
+        } catch (const std::exception& e) {
+            CHECK(false, std::string("SGP4 parse Alpha-5 270086: ") + e.what());
+        }
+    }
+
+    // Edge cases
+    {
+        GPElement gp{};
+        gp.classification_type = 'U';
+        gp.object_id = "2025-001A";
+        gp.epoch_iso = "2026-03-09T12:00:00.000000";
+        gp.mean_motion = 15.0; gp.eccentricity = 0.001;
+        gp.inclination = 97.0; gp.ra_of_asc_node = 150.0;
+        gp.arg_of_pericenter = 60.0; gp.mean_anomaly = 300.0;
+        gp.bstar = 0.0001; gp.mean_motion_dot = 0.0;
+        gp.mean_motion_ddot = 0.0; gp.ephemeris_type = 0;
+        gp.element_set_no = 999; gp.rev_at_epoch = 100;
+        gp.epoch_jd = iso_to_jd(gp.epoch_iso);
+
+        // 339999 → Z9999 (max Alpha-5)
+        gp.norad_cat_id = 339999;
+        TLE tle = gp_to_tle(gp);
+        CHECK(tle.line1.substr(2, 5) == "Z9999", "Alpha-5 max: 339999 → Z9999");
+
+        try {
+            libsgp4::Tle sgp4_tle("SAT", tle.line1, tle.line2);
+            CHECK(sgp4_tle.NoradNumber() == 339999, "SGP4 parsed Alpha-5 max 339999");
+        } catch (const std::exception& e) {
+            CHECK(false, std::string("SGP4 parse Alpha-5 339999: ") + e.what());
+        }
+
+        // 180000 → J0000 (J=18, 180000 % 10000 = 0)
+        gp.norad_cat_id = 180000;
+        tle = gp_to_tle(gp);
+        CHECK(tle.line1.substr(2, 5) == "J0000", "Alpha-5: 180000 → J0000");
+
+        try {
+            libsgp4::Tle sgp4_tle("SAT", tle.line1, tle.line2);
+            CHECK(sgp4_tle.NoradNumber() == 180000, "SGP4 parsed Alpha-5 180000");
+        } catch (const std::exception& e) {
+            CHECK(false, std::string("SGP4 parse Alpha-5 180000: ") + e.what());
+        }
+    }
+}
+
 int main() {
     test_json_parsing();
     test_csv_parsing();
     test_gp_to_tle_conversion();
     test_gp_json_propagation_accuracy();
     test_altitude_prefilter();
+    test_alpha5_encoding();
 
     std::cout << "\n=== Summary ===" << std::endl;
     std::cout << "Passed: " << tests_passed << std::endl;

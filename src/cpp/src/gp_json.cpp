@@ -379,6 +379,43 @@ static std::string intl_desig_to_tle(const std::string& object_id) {
     return result;
 }
 
+// Encode NORAD catalog number for TLE format (5 chars)
+// Standard: 00001-99999 as "NNNNN"
+// Alpha-5:  100000+ encoded as "ANNNN" where A is a letter
+//   A=10, B=11, ..., H=17, J=18, ..., N=22, P=23, ..., Z=35
+//   (I and O are skipped)
+static std::string encode_norad_alpha5(int norad_id) {
+    if (norad_id <= 99999) {
+        char buf[8];
+        snprintf(buf, sizeof(buf), "%05d", norad_id);
+        return std::string(buf);
+    }
+
+    // Alpha-5: first char encodes tens-of-thousands (10-35)
+    int first = norad_id / 10000;
+    int rest = norad_id % 10000;
+
+    // Map 10-35 to letters (skip I=18 and O=24 in ASCII, but in our scheme:
+    // A=10..H=17, J=18..N=22, P=23..Z=35)
+    char letter;
+    if (first >= 10 && first <= 17) {
+        letter = 'A' + (first - 10);       // A..H
+    } else if (first >= 18 && first <= 22) {
+        letter = 'J' + (first - 18);       // J..N
+    } else if (first >= 23 && first <= 35) {
+        letter = 'P' + (first - 23);       // P..Z
+    } else {
+        // Beyond Alpha-5 range (>359999) — shouldn't happen for current catalog
+        char buf[8];
+        snprintf(buf, sizeof(buf), "%05d", norad_id % 100000);
+        return std::string(buf);
+    }
+
+    char buf[8];
+    snprintf(buf, sizeof(buf), "%c%04d", letter, rest);
+    return std::string(buf);
+}
+
 TLE gp_to_tle(const GPElement& gp) {
     TLE tle;
     tle.name = gp.object_name;
@@ -444,10 +481,12 @@ TLE gp_to_tle(const GPElement& gp) {
     std::string bstar_s = tle_exp_format(gp.bstar);
     std::string mmddot_s = tle_exp_format(gp.mean_motion_ddot);
 
+    std::string norad_str = encode_norad_alpha5(gp.norad_cat_id);
+
     char line1[80];
     snprintf(line1, sizeof(line1),
-        "1 %05d%c %s %02d%012.8f %.10s %.8s %.8s %d %4d",
-        gp.norad_cat_id,
+        "1 %s%c %s %02d%012.8f %.10s %.8s %.8s %d %4d",
+        norad_str.c_str(),
         gp.classification_type,
         intl.c_str(),
         yy, epoch_doy,
@@ -479,8 +518,8 @@ TLE gp_to_tle(const GPElement& gp) {
     int ecc_int = static_cast<int>(std::round(gp.eccentricity * 10000000));
     char line2[80];
     snprintf(line2, sizeof(line2),
-        "2 %05d %8.4f %8.4f %07d %8.4f %8.4f %11.8f%5d",
-        gp.norad_cat_id,
+        "2 %s %8.4f %8.4f %07d %8.4f %8.4f %11.8f%5d",
+        norad_str.c_str(),
         gp.inclination,
         gp.ra_of_asc_node,
         ecc_int,
