@@ -181,6 +181,19 @@ test_screening/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/build
 .PHONY : test_screening/fast
 
+#=============================================================================
+# Target rules for targets named test_socrates_bulk
+
+# Build rule for target.
+test_socrates_bulk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_socrates_bulk
+.PHONY : test_socrates_bulk
+
+# fast build rule for target.
+test_socrates_bulk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/build
+.PHONY : test_socrates_bulk/fast
+
 deps/sgp4/libsgp4/CoordGeodetic.o: deps/sgp4/libsgp4/CoordGeodetic.cc.o
 .PHONY : deps/sgp4/libsgp4/CoordGeodetic.o
 
@@ -733,6 +746,30 @@ tests/test_socrates.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/tests/test_socrates.cpp.s
 .PHONY : tests/test_socrates.cpp.s
 
+tests/test_socrates_bulk.o: tests/test_socrates_bulk.cpp.o
+.PHONY : tests/test_socrates_bulk.o
+
+# target to build an object file
+tests/test_socrates_bulk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o
+.PHONY : tests/test_socrates_bulk.cpp.o
+
+tests/test_socrates_bulk.i: tests/test_socrates_bulk.cpp.i
+.PHONY : tests/test_socrates_bulk.i
+
+# target to preprocess a source file
+tests/test_socrates_bulk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.i
+.PHONY : tests/test_socrates_bulk.cpp.i
+
+tests/test_socrates_bulk.s: tests/test_socrates_bulk.cpp.s
+.PHONY : tests/test_socrates_bulk.s
+
+# target to generate assembly for a file
+tests/test_socrates_bulk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.s
+.PHONY : tests/test_socrates_bulk.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -746,6 +783,7 @@ help:
 	@echo "... test_gp_json"
 	@echo "... test_screening"
 	@echo "... test_socrates"
+	@echo "... test_socrates_bulk"
 	@echo "... deps/sgp4/libsgp4/CoordGeodetic.o"
 	@echo "... deps/sgp4/libsgp4/CoordGeodetic.i"
 	@echo "... deps/sgp4/libsgp4/CoordGeodetic.s"
@@ -815,6 +853,9 @@ help:
 	@echo "... tests/test_socrates.o"
 	@echo "... tests/test_socrates.i"
 	@echo "... tests/test_socrates.s"
+	@echo "... tests/test_socrates_bulk.o"
+	@echo "... tests/test_socrates_bulk.i"
+	@echo "... tests/test_socrates_bulk.s"
 .PHONY : help
 
 

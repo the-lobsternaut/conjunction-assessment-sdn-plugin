@@ -69,6 +69,11 @@ if(NOT EMSCRIPTEN)
     add_executable(test_screening tests/test_screening.cpp)
     target_link_libraries(test_screening conjunction_lib)
     target_include_directories(test_screening PRIVATE include "${SGP4_DIR}")
+
+    # Bulk SOCRATES validation (100-1000+ conjunctions)
+    add_executable(test_socrates_bulk tests/test_socrates_bulk.cpp)
+    target_link_libraries(test_socrates_bulk conjunction_lib)
+    target_include_directories(test_socrates_bulk PRIVATE include "${SGP4_DIR}")
 endif()
 
 # ============================================================================

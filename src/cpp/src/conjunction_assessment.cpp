@@ -640,6 +640,20 @@ ConjunctionEvent assess_conjunction(
     return event;
 }
 
+ConjunctionEvent assess_conjunction_near(
+    const TLE& tle1, const TLE& tle2,
+    double tca_hint_jd, double window_hours,
+    double radius1_m, double radius2_m)
+{
+    // Search a narrow window around the expected TCA
+    double window_days = window_hours / 24.0;
+    double search_start = tca_hint_jd - window_days;
+    double search_duration = 2.0 * window_days;
+
+    return assess_conjunction(tle1, tle2, search_start, search_duration,
+                              radius1_m, radius2_m);
+}
+
 // ============================================================================
 // Conjunction Screening
 // ============================================================================

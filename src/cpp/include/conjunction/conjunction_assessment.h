@@ -90,6 +90,14 @@ ConjunctionEvent assess_conjunction(
     double radius1_m = DEFAULT_RADIUS_M,
     double radius2_m = DEFAULT_RADIUS_M);
 
+/// Compute full conjunction assessment near a known TCA
+/// Searches ±window_hours around tca_hint_jd
+ConjunctionEvent assess_conjunction_near(
+    const TLE& tle1, const TLE& tle2,
+    double tca_hint_jd, double window_hours = 2.0,
+    double radius1_m = DEFAULT_RADIUS_M,
+    double radius2_m = DEFAULT_RADIUS_M);
+
 /// Compute Alfano maximum collision probability
 /// d = miss distance (km), Rc = combined hard-body radius (km)
 /// Returns {max_probability, dilution_threshold_km}

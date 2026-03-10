@@ -68,6 +68,7 @@ all: CMakeFiles/conjunction_lib.dir/all
 all: CMakeFiles/test_socrates.dir/all
 all: CMakeFiles/test_gp_json.dir/all
 all: CMakeFiles/test_screening.dir/all
+all: CMakeFiles/test_socrates_bulk.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -76,6 +77,7 @@ codegen: CMakeFiles/conjunction_lib.dir/codegen
 codegen: CMakeFiles/test_socrates.dir/codegen
 codegen: CMakeFiles/test_gp_json.dir/codegen
 codegen: CMakeFiles/test_screening.dir/codegen
+codegen: CMakeFiles/test_socrates_bulk.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -88,6 +90,7 @@ clean: CMakeFiles/conjunction_lib.dir/clean
 clean: CMakeFiles/test_socrates.dir/clean
 clean: CMakeFiles/test_gp_json.dir/clean
 clean: CMakeFiles/test_screening.dir/clean
+clean: CMakeFiles/test_socrates_bulk.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -158,8 +161,8 @@ CMakeFiles/conjunction_lib.dir/clean:
 # Target rules for target CMakeFiles/test_socrates.dir
 
 # All Build rule for target.
-CMakeFiles/test_socrates.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_socrates.dir/all: CMakeFiles/conjunction_lib.dir/all
+CMakeFiles/test_socrates.dir/all: CMakeFiles/sgp4_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=27,28 "Built target test_socrates"
@@ -191,8 +194,8 @@ CMakeFiles/test_socrates.dir/clean:
 # Target rules for target CMakeFiles/test_gp_json.dir
 
 # All Build rule for target.
-CMakeFiles/test_gp_json.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_gp_json.dir/all: CMakeFiles/conjunction_lib.dir/all
+CMakeFiles/test_gp_json.dir/all: CMakeFiles/sgp4_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=23,24 "Built target test_gp_json"
@@ -224,8 +227,8 @@ CMakeFiles/test_gp_json.dir/clean:
 # Target rules for target CMakeFiles/test_screening.dir
 
 # All Build rule for target.
-CMakeFiles/test_screening.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_screening.dir/all: CMakeFiles/conjunction_lib.dir/all
+CMakeFiles/test_screening.dir/all: CMakeFiles/sgp4_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=25,26 "Built target test_screening"
@@ -252,6 +255,39 @@ CMakeFiles/test_screening.dir/codegen:
 CMakeFiles/test_screening.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/clean
 .PHONY : CMakeFiles/test_screening.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_socrates_bulk.dir
+
+# All Build rule for target.
+CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/conjunction_lib.dir/all
+CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/sgp4_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=29,30 "Built target test_socrates_bulk"
+.PHONY : CMakeFiles/test_socrates_bulk.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_socrates_bulk.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 24
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_socrates_bulk.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_socrates_bulk.dir/rule
+
+# Convenience name for target.
+test_socrates_bulk: CMakeFiles/test_socrates_bulk.dir/rule
+.PHONY : test_socrates_bulk
+
+# codegen rule for target.
+CMakeFiles/test_socrates_bulk.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=29,30 "Finished codegen for target test_socrates_bulk"
+.PHONY : CMakeFiles/test_socrates_bulk.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_socrates_bulk.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/clean
+.PHONY : CMakeFiles/test_socrates_bulk.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
