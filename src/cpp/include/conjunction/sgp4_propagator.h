@@ -45,6 +45,9 @@ struct TLE {
     double mean_motion = 0.0;   // rev/day
 };
 
+// Forward declaration
+struct GPElement;
+
 /// Parse a TLE from 3 lines (name + line1 + line2)
 TLE parse_tle(const std::string& name, const std::string& line1, const std::string& line2);
 
@@ -54,6 +57,10 @@ std::vector<TLE> parse_tle_file(const std::string& data);
 /// Propagate a TLE to a given Julian Date using SGP4
 /// Returns state in TEME frame (km, km/s)
 StateVector propagate_sgp4(const TLE& tle, double target_jd);
+
+/// Propagate directly from GP/OMM elements (no TLE text intermediary)
+/// Supports any NORAD catalog ID (integer, no 5-digit limit)
+StateVector propagate_sgp4_gp(const GPElement& gp, double target_jd);
 
 /// Convert Julian Date to ISO 8601 string
 std::string jd_to_iso(double jd);

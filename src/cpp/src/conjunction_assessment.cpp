@@ -7,10 +7,12 @@
  */
 
 #include "conjunction/conjunction_assessment.h"
+#include "conjunction/gp_json.h"
 
 // dnwrnr/sgp4 headers
 #include "Tle.h"
 #include "SGP4.h"
+#include "OrbitalElements.h"
 #include "DateTime.h"
 #include "TimeSpan.h"
 #include "Eci.h"
@@ -229,6 +231,66 @@ StateVector propagate_sgp4(const TLE& tle, double target_jd) {
     libsgp4::DateTime target_dt = epoch + offset;
 
     // Propagate
+    libsgp4::Eci eci = sgp4.FindPosition(target_dt);
+
+    StateVector sv;
+    sv.epoch_jd = target_jd;
+    sv.x = eci.Position().x;
+    sv.y = eci.Position().y;
+    sv.z = eci.Position().z;
+    sv.vx = eci.Velocity().x;
+    sv.vy = eci.Velocity().y;
+    sv.vz = eci.Velocity().z;
+    return sv;
+}
+
+StateVector propagate_sgp4_gp(const GPElement& gp, double target_jd) {
+    // Convert GP epoch ISO → DateTime
+    int year = 0, month = 0, day = 0, hour = 0, minute = 0;
+    double second = 0.0;
+    sscanf(gp.epoch_iso.c_str(), "%d-%d-%dT%d:%d:%lf",
+           &year, &month, &day, &hour, &minute, &second);
+
+    int whole_sec = static_cast<int>(second);
+    int microsec = static_cast<int>((second - whole_sec) * 1000000.0);
+    libsgp4::DateTime epoch(year, month, day, hour, minute, whole_sec, microsec);
+
+    // Convert degrees → radians, rev/day → rad/min
+    constexpr double DEG2RAD = 3.14159265358979323846 / 180.0;
+    constexpr double TWOPI = 2.0 * 3.14159265358979323846;
+    constexpr double MIN_PER_DAY = 1440.0;
+
+    double mean_motion_rad_min = gp.mean_motion * TWOPI / MIN_PER_DAY;
+
+    // Build OrbitalElements directly (no TLE text)
+    libsgp4::OrbitalElements elements(
+        gp.mean_anomaly * DEG2RAD,
+        gp.ra_of_asc_node * DEG2RAD,
+        gp.arg_of_pericenter * DEG2RAD,
+        gp.eccentricity,
+        gp.inclination * DEG2RAD,
+        mean_motion_rad_min,
+        gp.bstar,
+        epoch
+    );
+
+    // Initialize SGP4 from elements directly
+    libsgp4::SGP4 sgp4(elements);
+
+    // Compute target DateTime
+    double delta_days = target_jd - gp.epoch_jd;
+    int whole_days = static_cast<int>(delta_days);
+    double frac_day = delta_days - whole_days;
+    int hours = static_cast<int>(frac_day * 24.0);
+    double frac_hour = frac_day * 24.0 - hours;
+    int minutes = static_cast<int>(frac_hour * 60.0);
+    double frac_min = frac_hour * 60.0 - minutes;
+    int seconds = static_cast<int>(frac_min * 60.0);
+    int microseconds = static_cast<int>((frac_min * 60.0 - seconds) * 1000000.0);
+
+    libsgp4::TimeSpan offset(whole_days, hours, minutes, seconds, microseconds);
+    libsgp4::DateTime target_dt = epoch + offset;
+
     libsgp4::Eci eci = sgp4.FindPosition(target_dt);
 
     StateVector sv;

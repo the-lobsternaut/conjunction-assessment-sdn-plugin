@@ -817,6 +817,7 @@ CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o: /Users/lobstern
   /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.h \
   /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.h \
   /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/conjunction_assessment.h \
+  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h \
   /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h
 
 CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp \
@@ -3291,11 +3292,11 @@ CMakeFiles/conjunction_lib.dir/src/screening.cpp.o: /Users/lobsternaut/.openclaw
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h:
 
-/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h:
-
 /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp:
 
 /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h:
+
+/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h:
 
 /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/conjunction_assessment.h:
 

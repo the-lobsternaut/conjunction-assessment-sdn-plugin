@@ -368,6 +368,71 @@ void test_alpha5_encoding() {
     }
 }
 
+void test_direct_gp_propagation() {
+    std::cout << "\n--- Test: Direct GP→SGP4 (no TLE text) ---" << std::endl;
+
+    // ISS-like GP element
+    std::string json = R"JSON([{
+        "OBJECT_NAME": "ISS (ZARYA)",
+        "OBJECT_ID": "1998-067A",
+        "EPOCH": "2026-03-09T09:20:49.941888",
+        "MEAN_MOTION": 15.50099,
+        "ECCENTRICITY": 0.0001234,
+        "INCLINATION": 51.6435,
+        "RA_OF_ASC_NODE": 102.5175,
+        "ARG_OF_PERICENTER": 81.5233,
+        "MEAN_ANOMALY": 278.5887,
+        "EPHEMERIS_TYPE": 0,
+        "CLASSIFICATION_TYPE": "U",
+        "NORAD_CAT_ID": 25544,
+        "ELEMENT_SET_NO": 999,
+        "REV_AT_EPOCH": 7711,
+        "BSTAR": 3.1791e-05,
+        "MEAN_MOTION_DOT": 5.82e-06,
+        "MEAN_MOTION_DDOT": 0
+    }])JSON";
+
+    auto gps = parse_gp_json(json);
+    CHECK(gps.size() == 1, "Parsed 1 GP element");
+
+    auto& gp = gps[0];
+    double target_jd = gp.epoch_jd + 1.0; // +1 day
+
+    // Path 1: GP → TLE text → SGP4
+    TLE tle = gp_to_tle(gp);
+    StateVector sv_tle = propagate_sgp4(tle, target_jd);
+
+    // Path 2: GP → OrbitalElements → SGP4 (direct, no TLE text)
+    StateVector sv_gp = propagate_sgp4_gp(gp, target_jd);
+
+    // They should be identical (same math, same inputs)
+    double dx = std::abs(sv_tle.x - sv_gp.x);
+    double dy = std::abs(sv_tle.y - sv_gp.y);
+    double dz = std::abs(sv_tle.z - sv_gp.z);
+    double pos_diff = std::sqrt(dx*dx + dy*dy + dz*dz);
+
+    double dvx = std::abs(sv_tle.vx - sv_gp.vx);
+    double dvy = std::abs(sv_tle.vy - sv_gp.vy);
+    double dvz = std::abs(sv_tle.vz - sv_gp.vz);
+    double vel_diff = std::sqrt(dvx*dvx + dvy*dvy + dvz*dvz);
+
+    std::cout << "    TLE path:    x=" << sv_tle.x << " y=" << sv_tle.y << " z=" << sv_tle.z << std::endl;
+    std::cout << "    Direct GP:   x=" << sv_gp.x  << " y=" << sv_gp.y  << " z=" << sv_gp.z  << std::endl;
+    std::cout << "    Position Δ:  " << pos_diff * 1000 << " m" << std::endl;
+    std::cout << "    Velocity Δ:  " << vel_diff * 1000 << " m/s" << std::endl;
+
+    // Should match to < 1 meter (any diff is from TLE text precision loss)
+    CHECK(pos_diff < 0.001, "Direct GP matches TLE path to < 1m position");
+    CHECK(vel_diff < 0.00001, "Direct GP matches TLE path to < 0.01 m/s velocity");
+
+    // Test with 6-digit NORAD ID (impossible in standard TLE, works direct)
+    gp.norad_cat_id = 500000; // Beyond Alpha-5 range
+    StateVector sv_big = propagate_sgp4_gp(gp, target_jd);
+    CHECK(std::abs(sv_big.x - sv_gp.x) < 0.001, "6-digit NORAD ID propagates identically (integer-based)");
+
+    std::cout << "    500000 NORAD ID: x=" << sv_big.x << " (direct GP, no TLE format limit)" << std::endl;
+}
+
 int main() {
     test_json_parsing();
     test_csv_parsing();
@@ -375,6 +440,7 @@ int main() {
     test_gp_json_propagation_accuracy();
     test_altitude_prefilter();
     test_alpha5_encoding();
+    test_direct_gp_propagation();
 
     std::cout << "\n=== Summary ===" << std::endl;
     std::cout << "Passed: " << tests_passed << std::endl;
