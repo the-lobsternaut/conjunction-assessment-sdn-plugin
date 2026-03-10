@@ -194,6 +194,19 @@ test_socrates_bulk/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/build
 .PHONY : test_socrates_bulk/fast
 
+#=============================================================================
+# Target rules for targets named test_cdm_output
+
+# Build rule for target.
+test_cdm_output: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_cdm_output
+.PHONY : test_cdm_output
+
+# fast build rule for target.
+test_cdm_output/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/build
+.PHONY : test_cdm_output/fast
+
 deps/sgp4/libsgp4/CoordGeodetic.o: deps/sgp4/libsgp4/CoordGeodetic.cc.o
 .PHONY : deps/sgp4/libsgp4/CoordGeodetic.o
 
@@ -578,6 +591,30 @@ deps/sgp4/libsgp4/Vector.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sgp4_lib.dir/build.make CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.s
 .PHONY : deps/sgp4/libsgp4/Vector.cc.s
 
+src/cdm_output.o: src/cdm_output.cpp.o
+.PHONY : src/cdm_output.o
+
+# target to build an object file
+src/cdm_output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o
+.PHONY : src/cdm_output.cpp.o
+
+src/cdm_output.i: src/cdm_output.cpp.i
+.PHONY : src/cdm_output.i
+
+# target to preprocess a source file
+src/cdm_output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.i
+.PHONY : src/cdm_output.cpp.i
+
+src/cdm_output.s: src/cdm_output.cpp.s
+.PHONY : src/cdm_output.s
+
+# target to generate assembly for a file
+src/cdm_output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.s
+.PHONY : src/cdm_output.cpp.s
+
 src/conjunction_assessment.o: src/conjunction_assessment.cpp.o
 .PHONY : src/conjunction_assessment.o
 
@@ -673,6 +710,30 @@ src/screening.s: src/screening.cpp.s
 src/screening.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/screening.cpp.s
 .PHONY : src/screening.cpp.s
+
+tests/test_cdm_output.o: tests/test_cdm_output.cpp.o
+.PHONY : tests/test_cdm_output.o
+
+# target to build an object file
+tests/test_cdm_output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/tests/test_cdm_output.cpp.o
+.PHONY : tests/test_cdm_output.cpp.o
+
+tests/test_cdm_output.i: tests/test_cdm_output.cpp.i
+.PHONY : tests/test_cdm_output.i
+
+# target to preprocess a source file
+tests/test_cdm_output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/tests/test_cdm_output.cpp.i
+.PHONY : tests/test_cdm_output.cpp.i
+
+tests/test_cdm_output.s: tests/test_cdm_output.cpp.s
+.PHONY : tests/test_cdm_output.s
+
+# target to generate assembly for a file
+tests/test_cdm_output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/tests/test_cdm_output.cpp.s
+.PHONY : tests/test_cdm_output.cpp.s
 
 tests/test_gp_json.o: tests/test_gp_json.cpp.o
 .PHONY : tests/test_gp_json.o
@@ -780,6 +841,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... conjunction_lib"
 	@echo "... sgp4_lib"
+	@echo "... test_cdm_output"
 	@echo "... test_gp_json"
 	@echo "... test_screening"
 	@echo "... test_socrates"
@@ -832,6 +894,9 @@ help:
 	@echo "... deps/sgp4/libsgp4/Vector.o"
 	@echo "... deps/sgp4/libsgp4/Vector.i"
 	@echo "... deps/sgp4/libsgp4/Vector.s"
+	@echo "... src/cdm_output.o"
+	@echo "... src/cdm_output.i"
+	@echo "... src/cdm_output.s"
 	@echo "... src/conjunction_assessment.o"
 	@echo "... src/conjunction_assessment.i"
 	@echo "... src/conjunction_assessment.s"
@@ -844,6 +909,9 @@ help:
 	@echo "... src/screening.o"
 	@echo "... src/screening.i"
 	@echo "... src/screening.s"
+	@echo "... tests/test_cdm_output.o"
+	@echo "... tests/test_cdm_output.i"
+	@echo "... tests/test_cdm_output.s"
 	@echo "... tests/test_gp_json.o"
 	@echo "... tests/test_gp_json.i"
 	@echo "... tests/test_gp_json.s"

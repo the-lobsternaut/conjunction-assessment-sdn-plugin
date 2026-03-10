@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o"
+  "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o.d"
   "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o"
   "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o.d"
   "CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o"

@@ -131,6 +131,17 @@ void inertial_to_rtn(const StateVector& ref, const StateVector& target,
                      double& r, double& t, double& n,
                      double& vr, double& vt, double& vn);
 
+/// Serialize a conjunction event to CCSDS CDM FlatBuffers binary ($CDM identifier)
+/// Returns bytes written (>=0 success), -2 buffer too small, -1 error
+int32_t conjunction_to_cdm(
+    const ConjunctionEvent& event,
+    uint8_t* output, uint32_t output_capacity);
+
+/// Serialize multiple conjunction events as size-prefixed CDM collection
+int32_t conjunctions_to_cdm_batch(
+    const std::vector<ConjunctionEvent>& events,
+    uint8_t* output, uint32_t output_capacity);
+
 } // namespace conjunction
 
 #endif // CONJUNCTION_ASSESSMENT_H

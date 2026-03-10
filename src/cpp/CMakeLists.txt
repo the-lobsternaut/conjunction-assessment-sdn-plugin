@@ -44,10 +44,15 @@ set(CA_SOURCES
     src/gp_json.cpp
     src/kdtree.cpp
     src/screening.cpp
+    src/cdm_output.cpp
 )
 
 add_library(conjunction_lib STATIC ${CA_SOURCES})
 target_include_directories(conjunction_lib PUBLIC include "${SGP4_DIR}")
+if(SDS_ROOT)
+    target_include_directories(conjunction_lib PUBLIC
+        "${SDS_ROOT}/packages/flatbuffers/include")
+endif()
 target_link_libraries(conjunction_lib PUBLIC sgp4_lib Threads::Threads)
 
 # ============================================================================
@@ -74,6 +79,14 @@ if(NOT EMSCRIPTEN)
     add_executable(test_socrates_bulk tests/test_socrates_bulk.cpp)
     target_link_libraries(test_socrates_bulk conjunction_lib)
     target_include_directories(test_socrates_bulk PRIVATE include "${SGP4_DIR}")
+
+    # CDM FlatBuffers output test
+    if(SDS_ROOT)
+        add_executable(test_cdm_output tests/test_cdm_output.cpp)
+        target_link_libraries(test_cdm_output conjunction_lib)
+        target_include_directories(test_cdm_output PRIVATE include "${SGP4_DIR}"
+            "${SDS_ROOT}/packages/flatbuffers/include")
+    endif()
 endif()
 
 # ============================================================================
