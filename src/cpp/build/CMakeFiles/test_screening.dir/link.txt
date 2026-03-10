@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_screening.dir/tests/test_screening.cpp.o -o test_screening  libconjunction_lib.a libsgp4_lib.a

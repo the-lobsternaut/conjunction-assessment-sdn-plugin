@@ -155,6 +155,32 @@ test_socrates/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/build
 .PHONY : test_socrates/fast
 
+#=============================================================================
+# Target rules for targets named test_gp_json
+
+# Build rule for target.
+test_gp_json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_gp_json
+.PHONY : test_gp_json
+
+# fast build rule for target.
+test_gp_json/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/build
+.PHONY : test_gp_json/fast
+
+#=============================================================================
+# Target rules for targets named test_screening
+
+# Build rule for target.
+test_screening: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_screening
+.PHONY : test_screening
+
+# fast build rule for target.
+test_screening/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/build
+.PHONY : test_screening/fast
+
 deps/sgp4/libsgp4/CoordGeodetic.o: deps/sgp4/libsgp4/CoordGeodetic.cc.o
 .PHONY : deps/sgp4/libsgp4/CoordGeodetic.o
 
@@ -563,6 +589,126 @@ src/conjunction_assessment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.s
 .PHONY : src/conjunction_assessment.cpp.s
 
+src/gp_json.o: src/gp_json.cpp.o
+.PHONY : src/gp_json.o
+
+# target to build an object file
+src/gp_json.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o
+.PHONY : src/gp_json.cpp.o
+
+src/gp_json.i: src/gp_json.cpp.i
+.PHONY : src/gp_json.i
+
+# target to preprocess a source file
+src/gp_json.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.i
+.PHONY : src/gp_json.cpp.i
+
+src/gp_json.s: src/gp_json.cpp.s
+.PHONY : src/gp_json.s
+
+# target to generate assembly for a file
+src/gp_json.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.s
+.PHONY : src/gp_json.cpp.s
+
+src/kdtree.o: src/kdtree.cpp.o
+.PHONY : src/kdtree.o
+
+# target to build an object file
+src/kdtree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o
+.PHONY : src/kdtree.cpp.o
+
+src/kdtree.i: src/kdtree.cpp.i
+.PHONY : src/kdtree.i
+
+# target to preprocess a source file
+src/kdtree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.i
+.PHONY : src/kdtree.cpp.i
+
+src/kdtree.s: src/kdtree.cpp.s
+.PHONY : src/kdtree.s
+
+# target to generate assembly for a file
+src/kdtree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.s
+.PHONY : src/kdtree.cpp.s
+
+src/screening.o: src/screening.cpp.o
+.PHONY : src/screening.o
+
+# target to build an object file
+src/screening.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/screening.cpp.o
+.PHONY : src/screening.cpp.o
+
+src/screening.i: src/screening.cpp.i
+.PHONY : src/screening.i
+
+# target to preprocess a source file
+src/screening.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/screening.cpp.i
+.PHONY : src/screening.cpp.i
+
+src/screening.s: src/screening.cpp.s
+.PHONY : src/screening.s
+
+# target to generate assembly for a file
+src/screening.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/screening.cpp.s
+.PHONY : src/screening.cpp.s
+
+tests/test_gp_json.o: tests/test_gp_json.cpp.o
+.PHONY : tests/test_gp_json.o
+
+# target to build an object file
+tests/test_gp_json.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/tests/test_gp_json.cpp.o
+.PHONY : tests/test_gp_json.cpp.o
+
+tests/test_gp_json.i: tests/test_gp_json.cpp.i
+.PHONY : tests/test_gp_json.i
+
+# target to preprocess a source file
+tests/test_gp_json.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/tests/test_gp_json.cpp.i
+.PHONY : tests/test_gp_json.cpp.i
+
+tests/test_gp_json.s: tests/test_gp_json.cpp.s
+.PHONY : tests/test_gp_json.s
+
+# target to generate assembly for a file
+tests/test_gp_json.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/tests/test_gp_json.cpp.s
+.PHONY : tests/test_gp_json.cpp.s
+
+tests/test_screening.o: tests/test_screening.cpp.o
+.PHONY : tests/test_screening.o
+
+# target to build an object file
+tests/test_screening.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/tests/test_screening.cpp.o
+.PHONY : tests/test_screening.cpp.o
+
+tests/test_screening.i: tests/test_screening.cpp.i
+.PHONY : tests/test_screening.i
+
+# target to preprocess a source file
+tests/test_screening.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/tests/test_screening.cpp.i
+.PHONY : tests/test_screening.cpp.i
+
+tests/test_screening.s: tests/test_screening.cpp.s
+.PHONY : tests/test_screening.s
+
+# target to generate assembly for a file
+tests/test_screening.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/tests/test_screening.cpp.s
+.PHONY : tests/test_screening.cpp.s
+
 tests/test_socrates.o: tests/test_socrates.cpp.o
 .PHONY : tests/test_socrates.o
 
@@ -597,6 +743,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... conjunction_lib"
 	@echo "... sgp4_lib"
+	@echo "... test_gp_json"
+	@echo "... test_screening"
 	@echo "... test_socrates"
 	@echo "... deps/sgp4/libsgp4/CoordGeodetic.o"
 	@echo "... deps/sgp4/libsgp4/CoordGeodetic.i"
@@ -649,6 +797,21 @@ help:
 	@echo "... src/conjunction_assessment.o"
 	@echo "... src/conjunction_assessment.i"
 	@echo "... src/conjunction_assessment.s"
+	@echo "... src/gp_json.o"
+	@echo "... src/gp_json.i"
+	@echo "... src/gp_json.s"
+	@echo "... src/kdtree.o"
+	@echo "... src/kdtree.i"
+	@echo "... src/kdtree.s"
+	@echo "... src/screening.o"
+	@echo "... src/screening.i"
+	@echo "... src/screening.s"
+	@echo "... tests/test_gp_json.o"
+	@echo "... tests/test_gp_json.i"
+	@echo "... tests/test_gp_json.s"
+	@echo "... tests/test_screening.o"
+	@echo "... tests/test_screening.i"
+	@echo "... tests/test_screening.s"
 	@echo "... tests/test_socrates.o"
 	@echo "... tests/test_socrates.i"
 	@echo "... tests/test_socrates.s"

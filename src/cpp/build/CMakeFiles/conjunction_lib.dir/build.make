@@ -86,17 +86,65 @@ CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_assessment.cpp -o CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.s
 
+CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o: CMakeFiles/conjunction_lib.dir/flags.make
+CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp
+CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o: CMakeFiles/conjunction_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o -MF CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o.d -o CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp
+
+CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp > CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.i
+
+CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp -o CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.s
+
+CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o: CMakeFiles/conjunction_lib.dir/flags.make
+CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp
+CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o: CMakeFiles/conjunction_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o -MF CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o.d -o CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp
+
+CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp > CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.i
+
+CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp -o CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.s
+
+CMakeFiles/conjunction_lib.dir/src/screening.cpp.o: CMakeFiles/conjunction_lib.dir/flags.make
+CMakeFiles/conjunction_lib.dir/src/screening.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp
+CMakeFiles/conjunction_lib.dir/src/screening.cpp.o: CMakeFiles/conjunction_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/conjunction_lib.dir/src/screening.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/conjunction_lib.dir/src/screening.cpp.o -MF CMakeFiles/conjunction_lib.dir/src/screening.cpp.o.d -o CMakeFiles/conjunction_lib.dir/src/screening.cpp.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp
+
+CMakeFiles/conjunction_lib.dir/src/screening.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/conjunction_lib.dir/src/screening.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp > CMakeFiles/conjunction_lib.dir/src/screening.cpp.i
+
+CMakeFiles/conjunction_lib.dir/src/screening.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/conjunction_lib.dir/src/screening.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp -o CMakeFiles/conjunction_lib.dir/src/screening.cpp.s
+
 # Object files for target conjunction_lib
 conjunction_lib_OBJECTS = \
-"CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o"
+"CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o" \
+"CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o" \
+"CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o" \
+"CMakeFiles/conjunction_lib.dir/src/screening.cpp.o"
 
 # External object files for target conjunction_lib
 conjunction_lib_EXTERNAL_OBJECTS =
 
 libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o
+libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o
+libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o
+libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/src/screening.cpp.o
 libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/build.make
 libconjunction_lib.a: CMakeFiles/conjunction_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libconjunction_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libconjunction_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/conjunction_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/conjunction_lib.dir/link.txt --verbose=$(VERBOSE)
 

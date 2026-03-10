@@ -87,26 +87,35 @@ async function fetchGPData(conjunctions) {
     const c = conjunctions[i];
     const id1 = c.NORAD_CAT_ID_1;
     const id2 = c.NORAD_CAT_ID_2;
-    const gpFile = `gp_${id1},${id2}.txt`;
-    const gpPath = join(DATA_DIR, gpFile);
 
-    if (existsSync(gpPath)) {
-      console.log(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — cached`);
-      continue;
+    // Fetch in all 3 formats: TLE (txt), JSON, CSV
+    const formats = [
+      { ext: 'txt', param: '' },           // Default TLE text
+      { ext: 'json', param: '&FORMAT=json' },
+      { ext: 'csv', param: '&FORMAT=csv' },
+    ];
+
+    for (const fmt of formats) {
+      const gpFile = `gp_${id1},${id2}.${fmt.ext}`;
+      const gpPath = join(DATA_DIR, gpFile);
+
+      if (existsSync(gpPath)) {
+        continue; // cached
+      }
+
+      const gpUrl = `${BASE_URL}/data.php?CATNR=${id1},${id2}${fmt.param}`;
+      try {
+        const res = await fetch(gpUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const gpText = await res.text();
+        writeFileSync(gpPath, gpText);
+      } catch (e) {
+        console.error(`  [${i + 1}] ${id1},${id2}.${fmt.ext} — ✗ ${e.message}`);
+      }
+      await new Promise(r => setTimeout(r, 300));
     }
 
-    const gpUrl = `${BASE_URL}/data.php?CATNR=${id1},${id2}`;
-    try {
-      const res = await fetch(gpUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const gpText = await res.text();
-      writeFileSync(gpPath, gpText);
-      console.log(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — ✓ (${gpText.split('\n').length} lines)`);
-    } catch (e) {
-      console.error(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — ✗ ${e.message}`);
-    }
-    // Rate limit: 500ms between requests
-    await new Promise(r => setTimeout(r, 500));
+    console.log(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — ✓ (txt+json+csv)`);
   }
 }
 
