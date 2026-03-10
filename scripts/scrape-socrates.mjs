@@ -1,15 +1,27 @@
 #!/usr/bin/env node
 /**
- * SOCRATES Scraper
+ * SOCRATES CSV Scraper
  *
- * Scrapes CelesTrak SOCRATES Plus for conjunction data + GP/TLE data.
- * Outputs JSON test fixtures for validating the conjunction assessment plugin.
+ * Downloads SOCRATES CSV data from CelesTrak and fetches GP/TLE data
+ * for each conjunction pair. Outputs test fixtures.
  *
  * Usage:
- *   node scrape-socrates.mjs [--max 10] [--order maxProb|minRange|relSpeed]
+ *   node scrape-socrates.mjs [--top N] [--sort minRange|maxProb]
+ *   node scrape-socrates.mjs --fetch-gp tests/data/socrates_maxprob.csv --top 20
+ *
+ * CSV endpoints (full catalog, ~120K conjunctions):
+ *   https://celestrak.org/SOCRATES/sort-minRange.csv
+ *   https://celestrak.org/SOCRATES/sort-maxProb.csv
+ *
+ * CSV format (RFC 4180):
+ *   NORAD_CAT_ID_1,OBJECT_NAME_1,DSE_1,NORAD_CAT_ID_2,OBJECT_NAME_2,DSE_2,
+ *   TCA,TCA_RANGE,TCA_RELATIVE_SPEED,MAX_PROB,DILUTION
+ *
+ * GP data for each pair:
+ *   https://celestrak.org/SOCRATES/data.php?CATNR={id1},{id2}
  */
 
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,144 +29,133 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, '..', 'tests', 'data');
 
 const BASE_URL = 'https://celestrak.org/SOCRATES';
-const MAX = parseInt(process.argv.find((a, i) => process.argv[i-1] === '--max') || '10');
-const ORDER = process.argv.find((a, i) => process.argv[i-1] === '--order') || 'MAXPROB';
 
-async function fetchText(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
-  return res.text();
+// Parse args
+const args = process.argv.slice(2);
+const getArg = (name, def) => {
+  const i = args.indexOf(name);
+  return i >= 0 && args[i + 1] ? args[i + 1] : def;
+};
+
+const TOP = parseInt(getArg('--top', '10'));
+const SORT = getArg('--sort', 'maxProb');
+const FETCH_GP = getArg('--fetch-gp', null);
+
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const header = lines[0].split(',');
+  return lines.slice(1).map(line => {
+    // Handle quoted fields (object names can contain commas in brackets)
+    const fields = [];
+    let current = '';
+    let inQuotes = false;
+    for (const ch of line) {
+      if (ch === '"') { inQuotes = !inQuotes; continue; }
+      if (ch === ',' && !inQuotes) { fields.push(current.trim()); current = ''; continue; }
+      current += ch;
+    }
+    fields.push(current.trim());
+
+    const obj = {};
+    header.forEach((h, i) => obj[h] = fields[i] || '');
+    return obj;
+  });
 }
 
-async function scrapeSOCRATES() {
-  console.log(`Scraping SOCRATES Plus: top ${MAX} by ${ORDER}...`);
+async function fetchCSV() {
+  const sortMap = { maxProb: 'sort-maxProb.csv', minRange: 'sort-minRange.csv' };
+  const csvFile = sortMap[SORT] || sortMap.maxProb;
+  const url = `${BASE_URL}/${csvFile}`;
 
-  // Fetch the HTML table page
-  const tableUrl = `${BASE_URL}/table-socrates.php?NAME=,&ORDER=${ORDER}&MAX=${MAX}`;
-  const html = await fetchText(tableUrl);
+  console.log(`Fetching ${url}...`);
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
 
-  // Parse metadata from HTML
-  const dataCurrentMatch = html.match(/Data current as of ([\d\- :A-Z]+)/);
-  const intervalMatch = html.match(/Start = ([\d\- :A-Z]+), Stop = ([\d\- :A-Z]+)/);
-  const conjMatch = html.match(/([\d,]+) Conjunctions/);
-  const primMatch = html.match(/([\d,]+) Primaries/);
-  const secMatch = html.match(/([\d,]+) Secondaries/);
+  mkdirSync(DATA_DIR, { recursive: true });
+  const outPath = join(DATA_DIR, `socrates_${SORT}.csv`);
+  writeFileSync(outPath, text);
+  console.log(`Saved ${outPath} (${text.split('\n').length} rows)`);
+  return text;
+}
 
-  // Parse conjunction rows using regex on table rows
-  // Each conjunction is 2 table rows
-  // Row 1: GP Data | NORAD1 | NAME1 | DSE1 | TCA | MIN_RANGE | REL_SPEED
-  // Row 2: graphs  | NORAD2 | NAME2 | DSE2 | MAX_PROB | DILUTION
-  const gpPattern = /data\.php\?CATNR=([\d,]+)/g;
-  const catnrPairs = [...html.matchAll(gpPattern)].map(m => m[1]);
-
-  // Parse table cells more carefully
-  const rowPattern = /<tr[^>]*>[\s\S]*?<\/tr>/gi;
-  const cellPattern = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-  const rows = [...html.matchAll(rowPattern)].map(m => m[0]);
-
-  const conjunctions = [];
-  let pairIndex = 0;
-
-  for (let i = 0; i < rows.length - 1; i++) {
-    const cells1 = [...rows[i].matchAll(cellPattern)].map(m => m[1].replace(/<[^>]+>/g, '').trim());
-    const cells2 = [...rows[i + 1].matchAll(cellPattern)].map(m => m[1].replace(/<[^>]+>/g, '').trim());
-
-    // Check if this is a data row (has GP Data)
-    if (!rows[i].includes('data.php?CATNR=')) continue;
-
-    const catnrs = catnrPairs[pairIndex++];
-    if (!catnrs) break;
-
-    // Find the actual data cells (skip the GP Data cell)
-    const norad1 = cells1.find(c => /^\d{5,6}$/.test(c));
-    const norad2 = cells2.find(c => /^\d{5,6}$/.test(c));
-    if (!norad1 || !norad2) continue;
-
-    const idx1 = cells1.indexOf(norad1);
-    const idx2 = cells2.indexOf(norad2);
-
-    const name1 = cells1[idx1 + 1] || '';
-    const dse1 = parseFloat(cells1[idx1 + 2]) || 0;
-    const tca = cells1[idx1 + 3] || '';
-    const minRange = parseFloat(cells1[idx1 + 4]) || 0;
-    const relSpeed = parseFloat(cells1[idx1 + 5]) || 0;
-
-    const name2 = cells2[idx2 + 1] || '';
-    const dse2 = parseFloat(cells2[idx2 + 2]) || 0;
-    const maxProb = cells2[idx2 + 3] || '';
-    const dilution = parseFloat(cells2[idx2 + 4]) || 0;
-
-    // Parse ops status from name
-    const parseStatus = (name) => {
-      const m = name.match(/\[([^\]]+)\]/);
-      return m ? m[1] : '';
-    };
-
-    conjunctions.push({
-      obj1_norad: parseInt(norad1),
-      obj1_name: name1.replace(/\s*\[[^\]]+\]/, '').trim(),
-      obj1_status: parseStatus(name1),
-      obj1_dse: dse1,
-      obj2_norad: parseInt(norad2),
-      obj2_name: name2.replace(/\s*\[[^\]]+\]/, '').trim(),
-      obj2_status: parseStatus(name2),
-      obj2_dse: dse2,
-      tca: tca.replace(' ', 'T') + 'Z',
-      min_range_km: minRange,
-      rel_speed_kms: relSpeed,
-      max_prob: parseFloat(maxProb) || 0,
-      dilution_km: dilution,
-      gp_file: `gp_${catnrs}.txt`
-    });
-
-    i++; // Skip the second row
-  }
-
-  // Fetch GP data for each conjunction
-  console.log(`Found ${conjunctions.length} conjunctions. Fetching GP data...`);
+async function fetchGPData(conjunctions) {
+  console.log(`\nFetching GP data for ${conjunctions.length} conjunctions...`);
   mkdirSync(DATA_DIR, { recursive: true });
 
-  for (const conj of conjunctions) {
-    const catnrs = `${conj.obj1_norad},${conj.obj2_norad}`;
-    const gpUrl = `${BASE_URL}/data.php?CATNR=${catnrs}`;
-    try {
-      const gpData = await fetchText(gpUrl);
-      const gpPath = join(DATA_DIR, conj.gp_file);
-      writeFileSync(gpPath, gpData);
-      console.log(`  ✓ ${catnrs} (${gpData.split('\n').length} lines)`);
-    } catch (e) {
-      console.error(`  ✗ ${catnrs}: ${e.message}`);
+  for (let i = 0; i < conjunctions.length; i++) {
+    const c = conjunctions[i];
+    const id1 = c.NORAD_CAT_ID_1;
+    const id2 = c.NORAD_CAT_ID_2;
+    const gpFile = `gp_${id1},${id2}.txt`;
+    const gpPath = join(DATA_DIR, gpFile);
+
+    if (existsSync(gpPath)) {
+      console.log(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — cached`);
+      continue;
     }
-    // Be polite to CelesTrak
+
+    const gpUrl = `${BASE_URL}/data.php?CATNR=${id1},${id2}`;
+    try {
+      const res = await fetch(gpUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const gpText = await res.text();
+      writeFileSync(gpPath, gpText);
+      console.log(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — ✓ (${gpText.split('\n').length} lines)`);
+    } catch (e) {
+      console.error(`  [${i + 1}/${conjunctions.length}] ${id1},${id2} — ✗ ${e.message}`);
+    }
+    // Rate limit: 500ms between requests
     await new Promise(r => setTimeout(r, 500));
   }
-
-  // Build output
-  const now = new Date().toISOString();
-  const output = {
-    source: 'CelesTrak SOCRATES Plus',
-    scraped_at: now,
-    data_current_as_of: dataCurrentMatch?.[1] || '',
-    computation_interval: {
-      start: intervalMatch?.[1] || '',
-      stop: intervalMatch?.[2] || ''
-    },
-    threshold_km: 5.0,
-    primaries: parseInt((primMatch?.[1] || '0').replace(/,/g, '')),
-    secondaries: parseInt((secMatch?.[1] || '0').replace(/,/g, '')),
-    total_conjunctions: parseInt((conjMatch?.[1] || '0').replace(/,/g, '')),
-    order: ORDER,
-    max_results: MAX,
-    conjunctions
-  };
-
-  const outPath = join(DATA_DIR, `socrates_top${MAX}_${ORDER.toLowerCase()}_${now.slice(0, 10)}.json`);
-  writeFileSync(outPath, JSON.stringify(output, null, 2));
-  console.log(`\nWritten: ${outPath}`);
-  console.log(`${conjunctions.length} conjunctions with GP data saved.`);
 }
 
-scrapeSOCRATES().catch(e => {
-  console.error('Scraper failed:', e);
-  process.exit(1);
-});
+async function main() {
+  let csvText;
+
+  if (FETCH_GP) {
+    // Load existing CSV and fetch GP data
+    csvText = readFileSync(FETCH_GP, 'utf8');
+  } else {
+    // Download fresh CSV
+    csvText = await fetchCSV();
+  }
+
+  const all = parseCSV(csvText);
+  console.log(`Parsed ${all.length} total conjunctions`);
+
+  const top = all.slice(0, TOP);
+  console.log(`Processing top ${top.length}`);
+
+  // Fetch GP data for each
+  await fetchGPData(top);
+
+  // Write JSON fixture
+  const fixture = {
+    source: 'CelesTrak SOCRATES Plus (CSV)',
+    scraped_at: new Date().toISOString(),
+    sort: SORT,
+    total: all.length,
+    top_n: TOP,
+    conjunctions: top.map(c => ({
+      obj1_norad: parseInt(c.NORAD_CAT_ID_1),
+      obj1_name: c.OBJECT_NAME_1,
+      obj1_dse: parseFloat(c.DSE_1),
+      obj2_norad: parseInt(c.NORAD_CAT_ID_2),
+      obj2_name: c.OBJECT_NAME_2,
+      obj2_dse: parseFloat(c.DSE_2),
+      tca: c.TCA.replace(' ', 'T') + 'Z',
+      min_range_km: parseFloat(c.TCA_RANGE),
+      rel_speed_kms: parseFloat(c.TCA_RELATIVE_SPEED),
+      max_prob: parseFloat(c.MAX_PROB),
+      dilution_km: parseFloat(c.DILUTION),
+      gp_file: `gp_${c.NORAD_CAT_ID_1},${c.NORAD_CAT_ID_2}.txt`
+    }))
+  };
+
+  const fixturePath = join(DATA_DIR, `socrates_top${TOP}_${SORT}.json`);
+  writeFileSync(fixturePath, JSON.stringify(fixture, null, 2));
+  console.log(`\nFixture: ${fixturePath}`);
+}
+
+main().catch(e => { console.error(e); process.exit(1); });
