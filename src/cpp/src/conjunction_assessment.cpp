@@ -383,35 +383,72 @@ double find_tca(const TLE& tle1, const TLE& tle2,
                 double start_jd, double duration_days,
                 double coarse_step_sec, double fine_tol_sec) {
     double end_jd = start_jd + duration_days;
-    double step = coarse_step_sec;
 
-    // Step 1: Find all local minima with 10-second steps
-    // (LEO orbital period ~90 min, so 10s gives ~540 samples per orbit)
-    auto minima = find_all_minima(tle1, tle2, start_jd, end_jd, 10.0);
+    // Step 1: Find all local minima with 5-second steps
+    // 5s is critical for catching razor-thin encounters where objects
+    // at 12+ km/s relative speed have sub-km TCA lasting < 0.1 seconds.
+    // 10s step misses these entirely as local minima.
+    auto minima = find_all_minima(tle1, tle2, start_jd, end_jd, 5.0);
 
     if (minima.empty()) {
-        // Fall back to global minimum with coarser step
-        minima = find_all_minima(tle1, tle2, start_jd, end_jd, step);
+        minima = find_all_minima(tle1, tle2, start_jd, end_jd, coarse_step_sec);
     }
 
     if (minima.empty()) {
-        return start_jd; // No close approach found
+        return start_jd;
     }
 
-    // Step 2: Find the closest approach among all minima
+    // Step 2: Sort by coarse distance, take top candidates for refinement
+    // Critical insight: at high relative speeds (10-15 km/s), the coarse
+    // 10-second sample can be 50+ km from the actual TCA even when the
+    // true minimum is < 1 km. We must refine multiple candidates.
+    std::sort(minima.begin(), minima.end(),
+              [](const auto& a, const auto& b) { return a.second < b.second; });
+
+    // Refine top N candidates with two-phase approach:
+    // Phase 1: Sub-second rescan around each coarse candidate (±10s at 0.1s)
+    //          to catch razor-thin encounters (closing speed > 10 km/s means
+    //          miss distance can go from 7km to 14m in under 1 second)
+    // Phase 2: Golden section refinement on the best sub-second position
+    int n_refine = std::min(static_cast<int>(minima.size()), 30);
+
     double best_jd = minima[0].first;
-    double best_dist = minima[0].second;
+    double best_dist = 1e18;
 
-    for (const auto& m : minima) {
-        if (m.second < best_dist) {
-            best_dist = m.second;
-            best_jd = m.first;
+    for (int i = 0; i < n_refine; i++) {
+        double center = minima[i].first;
+
+        // Phase 1: Sub-second rescan ±10s at 0.05s steps
+        double subscan_best_jd = center;
+        double subscan_best_dist = minima[i].second;
+        double subscan_step = 0.05 / 86400.0; // 0.05 second steps
+        double subscan_window = 10.0 / 86400.0; // ±10 seconds
+
+        for (double jd = center - subscan_window; jd <= center + subscan_window; jd += subscan_step) {
+            try {
+                double d = distance_at_jd(tle1, tle2, jd);
+                if (d < subscan_best_dist) {
+                    subscan_best_dist = d;
+                    subscan_best_jd = jd;
+                }
+            } catch (...) {}
         }
+
+        // Phase 2: Golden section from the sub-second best position (±1s window)
+        double refined_jd = refine_minimum(tle1, tle2,
+                                           subscan_best_jd,
+                                           1.0 / 86400.0, // ±1 second
+                                           fine_tol_sec);
+        try {
+            double d = distance_at_jd(tle1, tle2, refined_jd);
+            if (d < best_dist) {
+                best_dist = d;
+                best_jd = refined_jd;
+            }
+        } catch (...) {}
     }
 
-    // Step 3: Refine with golden section search
-    double step_days = 10.0 / 86400.0;
-    return refine_minimum(tle1, tle2, best_jd, step_days * 2, fine_tol_sec);
+    return best_jd;
 }
 
 // ============================================================================
