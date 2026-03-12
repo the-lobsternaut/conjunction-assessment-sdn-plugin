@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp
+CMAKE_SOURCE_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build
+CMAKE_BINARY_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -206,6 +206,32 @@ test_cdm_output: cmake_check_build_system
 test_cdm_output/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/build
 .PHONY : test_cdm_output/fast
+
+#=============================================================================
+# Target rules for targets named test_pc_methods
+
+# Build rule for target.
+test_pc_methods: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pc_methods
+.PHONY : test_pc_methods
+
+# fast build rule for target.
+test_pc_methods/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/build
+.PHONY : test_pc_methods/fast
+
+#=============================================================================
+# Target rules for targets named test_engine
+
+# Build rule for target.
+test_engine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_engine
+.PHONY : test_engine
+
+# fast build rule for target.
+test_engine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/build
+.PHONY : test_engine/fast
 
 deps/sgp4/libsgp4/CoordGeodetic.o: deps/sgp4/libsgp4/CoordGeodetic.cc.o
 .PHONY : deps/sgp4/libsgp4/CoordGeodetic.o
@@ -639,6 +665,54 @@ src/conjunction_assessment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.s
 .PHONY : src/conjunction_assessment.cpp.s
 
+src/conjunction_engine.o: src/conjunction_engine.cpp.o
+.PHONY : src/conjunction_engine.o
+
+# target to build an object file
+src/conjunction_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/conjunction_engine.cpp.o
+.PHONY : src/conjunction_engine.cpp.o
+
+src/conjunction_engine.i: src/conjunction_engine.cpp.i
+.PHONY : src/conjunction_engine.i
+
+# target to preprocess a source file
+src/conjunction_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/conjunction_engine.cpp.i
+.PHONY : src/conjunction_engine.cpp.i
+
+src/conjunction_engine.s: src/conjunction_engine.cpp.s
+.PHONY : src/conjunction_engine.s
+
+# target to generate assembly for a file
+src/conjunction_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/conjunction_engine.cpp.s
+.PHONY : src/conjunction_engine.cpp.s
+
+src/ephemeris_source.o: src/ephemeris_source.cpp.o
+.PHONY : src/ephemeris_source.o
+
+# target to build an object file
+src/ephemeris_source.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/ephemeris_source.cpp.o
+.PHONY : src/ephemeris_source.cpp.o
+
+src/ephemeris_source.i: src/ephemeris_source.cpp.i
+.PHONY : src/ephemeris_source.i
+
+# target to preprocess a source file
+src/ephemeris_source.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/ephemeris_source.cpp.i
+.PHONY : src/ephemeris_source.cpp.i
+
+src/ephemeris_source.s: src/ephemeris_source.cpp.s
+.PHONY : src/ephemeris_source.s
+
+# target to generate assembly for a file
+src/ephemeris_source.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/ephemeris_source.cpp.s
+.PHONY : src/ephemeris_source.cpp.s
+
 src/gp_json.o: src/gp_json.cpp.o
 .PHONY : src/gp_json.o
 
@@ -686,6 +760,30 @@ src/kdtree.s: src/kdtree.cpp.s
 src/kdtree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.s
 .PHONY : src/kdtree.cpp.s
+
+src/pc_method.o: src/pc_method.cpp.o
+.PHONY : src/pc_method.o
+
+# target to build an object file
+src/pc_method.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/pc_method.cpp.o
+.PHONY : src/pc_method.cpp.o
+
+src/pc_method.i: src/pc_method.cpp.i
+.PHONY : src/pc_method.i
+
+# target to preprocess a source file
+src/pc_method.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/pc_method.cpp.i
+.PHONY : src/pc_method.cpp.i
+
+src/pc_method.s: src/pc_method.cpp.s
+.PHONY : src/pc_method.s
+
+# target to generate assembly for a file
+src/pc_method.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/src/pc_method.cpp.s
+.PHONY : src/pc_method.cpp.s
 
 src/screening.o: src/screening.cpp.o
 .PHONY : src/screening.o
@@ -735,6 +833,30 @@ tests/test_cdm_output.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/tests/test_cdm_output.cpp.s
 .PHONY : tests/test_cdm_output.cpp.s
 
+tests/test_engine.o: tests/test_engine.cpp.o
+.PHONY : tests/test_engine.o
+
+# target to build an object file
+tests/test_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/tests/test_engine.cpp.o
+.PHONY : tests/test_engine.cpp.o
+
+tests/test_engine.i: tests/test_engine.cpp.i
+.PHONY : tests/test_engine.i
+
+# target to preprocess a source file
+tests/test_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/tests/test_engine.cpp.i
+.PHONY : tests/test_engine.cpp.i
+
+tests/test_engine.s: tests/test_engine.cpp.s
+.PHONY : tests/test_engine.s
+
+# target to generate assembly for a file
+tests/test_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/tests/test_engine.cpp.s
+.PHONY : tests/test_engine.cpp.s
+
 tests/test_gp_json.o: tests/test_gp_json.cpp.o
 .PHONY : tests/test_gp_json.o
 
@@ -758,6 +880,30 @@ tests/test_gp_json.s: tests/test_gp_json.cpp.s
 tests/test_gp_json.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/tests/test_gp_json.cpp.s
 .PHONY : tests/test_gp_json.cpp.s
+
+tests/test_pc_methods.o: tests/test_pc_methods.cpp.o
+.PHONY : tests/test_pc_methods.o
+
+# target to build an object file
+tests/test_pc_methods.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/tests/test_pc_methods.cpp.o
+.PHONY : tests/test_pc_methods.cpp.o
+
+tests/test_pc_methods.i: tests/test_pc_methods.cpp.i
+.PHONY : tests/test_pc_methods.i
+
+# target to preprocess a source file
+tests/test_pc_methods.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/tests/test_pc_methods.cpp.i
+.PHONY : tests/test_pc_methods.cpp.i
+
+tests/test_pc_methods.s: tests/test_pc_methods.cpp.s
+.PHONY : tests/test_pc_methods.s
+
+# target to generate assembly for a file
+tests/test_pc_methods.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/tests/test_pc_methods.cpp.s
+.PHONY : tests/test_pc_methods.cpp.s
 
 tests/test_screening.o: tests/test_screening.cpp.o
 .PHONY : tests/test_screening.o
@@ -842,7 +988,9 @@ help:
 	@echo "... conjunction_lib"
 	@echo "... sgp4_lib"
 	@echo "... test_cdm_output"
+	@echo "... test_engine"
 	@echo "... test_gp_json"
+	@echo "... test_pc_methods"
 	@echo "... test_screening"
 	@echo "... test_socrates"
 	@echo "... test_socrates_bulk"
@@ -900,21 +1048,36 @@ help:
 	@echo "... src/conjunction_assessment.o"
 	@echo "... src/conjunction_assessment.i"
 	@echo "... src/conjunction_assessment.s"
+	@echo "... src/conjunction_engine.o"
+	@echo "... src/conjunction_engine.i"
+	@echo "... src/conjunction_engine.s"
+	@echo "... src/ephemeris_source.o"
+	@echo "... src/ephemeris_source.i"
+	@echo "... src/ephemeris_source.s"
 	@echo "... src/gp_json.o"
 	@echo "... src/gp_json.i"
 	@echo "... src/gp_json.s"
 	@echo "... src/kdtree.o"
 	@echo "... src/kdtree.i"
 	@echo "... src/kdtree.s"
+	@echo "... src/pc_method.o"
+	@echo "... src/pc_method.i"
+	@echo "... src/pc_method.s"
 	@echo "... src/screening.o"
 	@echo "... src/screening.i"
 	@echo "... src/screening.s"
 	@echo "... tests/test_cdm_output.o"
 	@echo "... tests/test_cdm_output.i"
 	@echo "... tests/test_cdm_output.s"
+	@echo "... tests/test_engine.o"
+	@echo "... tests/test_engine.i"
+	@echo "... tests/test_engine.s"
 	@echo "... tests/test_gp_json.o"
 	@echo "... tests/test_gp_json.i"
 	@echo "... tests/test_gp_json.s"
+	@echo "... tests/test_pc_methods.o"
+	@echo "... tests/test_pc_methods.i"
+	@echo "... tests/test_pc_methods.s"
 	@echo "... tests/test_screening.o"
 	@echo "... tests/test_screening.i"
 	@echo "... tests/test_screening.s"

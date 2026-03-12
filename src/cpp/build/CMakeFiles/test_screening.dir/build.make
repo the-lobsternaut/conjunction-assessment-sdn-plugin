@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp
+CMAKE_SOURCE_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build
+CMAKE_BINARY_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_screening.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/test_screening.dir/codegen:
 .PHONY : CMakeFiles/test_screening.dir/codegen
 
 CMakeFiles/test_screening.dir/tests/test_screening.cpp.o: CMakeFiles/test_screening.dir/flags.make
-CMakeFiles/test_screening.dir/tests/test_screening.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp
+CMakeFiles/test_screening.dir/tests/test_screening.cpp.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp
 CMakeFiles/test_screening.dir/tests/test_screening.cpp.o: CMakeFiles/test_screening.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_screening.dir/tests/test_screening.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_screening.dir/tests/test_screening.cpp.o -MF CMakeFiles/test_screening.dir/tests/test_screening.cpp.o.d -o CMakeFiles/test_screening.dir/tests/test_screening.cpp.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_screening.dir/tests/test_screening.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_screening.dir/tests/test_screening.cpp.o -MF CMakeFiles/test_screening.dir/tests/test_screening.cpp.o.d -o CMakeFiles/test_screening.dir/tests/test_screening.cpp.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp
 
 CMakeFiles/test_screening.dir/tests/test_screening.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_screening.dir/tests/test_screening.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp > CMakeFiles/test_screening.dir/tests/test_screening.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp > CMakeFiles/test_screening.dir/tests/test_screening.cpp.i
 
 CMakeFiles/test_screening.dir/tests/test_screening.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_screening.dir/tests/test_screening.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp -o CMakeFiles/test_screening.dir/tests/test_screening.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_screening.cpp -o CMakeFiles/test_screening.dir/tests/test_screening.cpp.s
 
 # Object files for target test_screening
 test_screening_OBJECTS = \
@@ -98,7 +98,7 @@ test_screening: CMakeFiles/test_screening.dir/build.make
 test_screening: libconjunction_lib.a
 test_screening: libsgp4_lib.a
 test_screening: CMakeFiles/test_screening.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_screening"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_screening"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_screening.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -110,6 +110,6 @@ CMakeFiles/test_screening.dir/clean:
 .PHONY : CMakeFiles/test_screening.dir/clean
 
 CMakeFiles/test_screening.dir/depend:
-	cd /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/test_screening.dir/DependInfo.cmake "--color=$(COLOR)" test_screening
+	cd /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/test_screening.dir/DependInfo.cmake "--color=$(COLOR)" test_screening
 .PHONY : CMakeFiles/test_screening.dir/depend
 

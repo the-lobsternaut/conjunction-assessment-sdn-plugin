@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp
+CMAKE_SOURCE_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build
+CMAKE_BINARY_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sgp4_lib.dir/depend.make
@@ -73,228 +73,228 @@ CMakeFiles/sgp4_lib.dir/codegen:
 .PHONY : CMakeFiles/sgp4_lib.dir/codegen
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordGeodetic.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordTopocentric.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/CoordTopocentric.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DateTime.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/DecayedException.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Eci.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Globals.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Observer.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Observer.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/OrbitalElements.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SGP4.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SatelliteException.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SolarPosition.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/SolarPosition.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TimeSpan.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Tle.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/TleException.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.s
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o: CMakeFiles/sgp4_lib.dir/flags.make
-CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc
+CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o: CMakeFiles/sgp4_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o -MF CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o.d -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc > CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.i
 
 CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.cc -o CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.s
 
 # Object files for target sgp4_lib
 sgp4_lib_OBJECTS = \
@@ -336,7 +336,7 @@ libsgp4_lib.a: CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Util.cc.o
 libsgp4_lib.a: CMakeFiles/sgp4_lib.dir/deps/sgp4/libsgp4/Vector.cc.o
 libsgp4_lib.a: CMakeFiles/sgp4_lib.dir/build.make
 libsgp4_lib.a: CMakeFiles/sgp4_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libsgp4_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libsgp4_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/sgp4_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sgp4_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -349,6 +349,6 @@ CMakeFiles/sgp4_lib.dir/clean:
 .PHONY : CMakeFiles/sgp4_lib.dir/clean
 
 CMakeFiles/sgp4_lib.dir/depend:
-	cd /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/sgp4_lib.dir/DependInfo.cmake "--color=$(COLOR)" sgp4_lib
+	cd /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/sgp4_lib.dir/DependInfo.cmake "--color=$(COLOR)" sgp4_lib
 .PHONY : CMakeFiles/sgp4_lib.dir/depend
 

@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -o test_socrates_bulk  libconjunction_lib.a libsgp4_lib.a
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -o test_socrates_bulk  libconjunction_lib.a libsgp4_lib.a

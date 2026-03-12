@@ -1,6 +1,6 @@
 CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o: \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/kdtree.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/kdtree.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \

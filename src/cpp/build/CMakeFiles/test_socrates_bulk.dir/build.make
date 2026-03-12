@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp
+CMAKE_SOURCE_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build
+CMAKE_BINARY_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_socrates_bulk.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/test_socrates_bulk.dir/codegen:
 .PHONY : CMakeFiles/test_socrates_bulk.dir/codegen
 
 CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o: CMakeFiles/test_socrates_bulk.dir/flags.make
-CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o: /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp
+CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o: /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp
 CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o: CMakeFiles/test_socrates_bulk.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -MF CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o.d -o CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -c /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -MF CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o.d -o CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.o -c /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp
 
 CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp > CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp > CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.i
 
 CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp -o CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates_bulk.cpp -o CMakeFiles/test_socrates_bulk.dir/tests/test_socrates_bulk.cpp.s
 
 # Object files for target test_socrates_bulk
 test_socrates_bulk_OBJECTS = \
@@ -98,7 +98,7 @@ test_socrates_bulk: CMakeFiles/test_socrates_bulk.dir/build.make
 test_socrates_bulk: libconjunction_lib.a
 test_socrates_bulk: libsgp4_lib.a
 test_socrates_bulk: CMakeFiles/test_socrates_bulk.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_socrates_bulk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_socrates_bulk"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_socrates_bulk.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -110,6 +110,6 @@ CMakeFiles/test_socrates_bulk.dir/clean:
 .PHONY : CMakeFiles/test_socrates_bulk.dir/clean
 
 CMakeFiles/test_socrates_bulk.dir/depend:
-	cd /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/test_socrates_bulk.dir/DependInfo.cmake "--color=$(COLOR)" test_socrates_bulk
+	cd /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles/test_socrates_bulk.dir/DependInfo.cmake "--color=$(COLOR)" test_socrates_bulk
 .PHONY : CMakeFiles/test_socrates_bulk.dir/depend
 

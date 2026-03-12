@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include -I/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4 -I/Users/lobsternaut/software/space-data-network-project/packages/flatbuffers/include
+CXX_INCLUDES = -I/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include -I/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4 -I/Users/lobsternaut/software/space-data-network-project/packages/flatbuffers/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 

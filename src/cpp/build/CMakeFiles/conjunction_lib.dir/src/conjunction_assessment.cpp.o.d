@@ -1,7 +1,7 @@
 CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o: \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_assessment.cpp \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/conjunction_assessment.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_assessment.cpp \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/conjunction_assessment.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -755,10 +755,10 @@ CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Tle.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Util.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Globals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
@@ -799,7 +799,7 @@ CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DateTime.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
@@ -807,13 +807,14 @@ CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.h
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TimeSpan.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/TleException.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SGP4.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/OrbitalElements.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Eci.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/CoordGeodetic.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/Vector.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/SatelliteException.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/deps/sgp4/libsgp4/DecayedException.h

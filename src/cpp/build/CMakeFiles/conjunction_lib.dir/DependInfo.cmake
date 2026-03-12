@@ -8,11 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/cdm_output.cpp" "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o.d"
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_assessment.cpp" "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o.d"
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp" "CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o.d"
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp" "CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o.d"
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp" "CMakeFiles/conjunction_lib.dir/src/screening.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/screening.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/cdm_output.cpp" "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/cdm_output.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_assessment.cpp" "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/conjunction_assessment.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/conjunction_engine.cpp" "CMakeFiles/conjunction_lib.dir/src/conjunction_engine.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/conjunction_engine.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/ephemeris_source.cpp" "CMakeFiles/conjunction_lib.dir/src/ephemeris_source.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/ephemeris_source.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp" "CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/kdtree.cpp" "CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/kdtree.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/pc_method.cpp" "CMakeFiles/conjunction_lib.dir/src/pc_method.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/pc_method.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/screening.cpp" "CMakeFiles/conjunction_lib.dir/src/screening.cpp.o" "gcc" "CMakeFiles/conjunction_lib.dir/src/screening.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

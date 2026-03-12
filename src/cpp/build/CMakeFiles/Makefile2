@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp
+CMAKE_SOURCE_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build
+CMAKE_BINARY_DIR = /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -70,6 +70,8 @@ all: CMakeFiles/test_gp_json.dir/all
 all: CMakeFiles/test_screening.dir/all
 all: CMakeFiles/test_socrates_bulk.dir/all
 all: CMakeFiles/test_cdm_output.dir/all
+all: CMakeFiles/test_pc_methods.dir/all
+all: CMakeFiles/test_engine.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -80,6 +82,8 @@ codegen: CMakeFiles/test_gp_json.dir/codegen
 codegen: CMakeFiles/test_screening.dir/codegen
 codegen: CMakeFiles/test_socrates_bulk.dir/codegen
 codegen: CMakeFiles/test_cdm_output.dir/codegen
+codegen: CMakeFiles/test_pc_methods.dir/codegen
+codegen: CMakeFiles/test_engine.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -94,6 +98,8 @@ clean: CMakeFiles/test_gp_json.dir/clean
 clean: CMakeFiles/test_screening.dir/clean
 clean: CMakeFiles/test_socrates_bulk.dir/clean
 clean: CMakeFiles/test_cdm_output.dir/clean
+clean: CMakeFiles/test_pc_methods.dir/clean
+clean: CMakeFiles/test_engine.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -103,14 +109,14 @@ clean: CMakeFiles/test_cdm_output.dir/clean
 CMakeFiles/sgp4_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sgp4_lib.dir/build.make CMakeFiles/sgp4_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sgp4_lib.dir/build.make CMakeFiles/sgp4_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target sgp4_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target sgp4_lib"
 .PHONY : CMakeFiles/sgp4_lib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sgp4_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sgp4_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/sgp4_lib.dir/rule
 
 # Convenience name for target.
@@ -120,7 +126,7 @@ sgp4_lib: CMakeFiles/sgp4_lib.dir/rule
 # codegen rule for target.
 CMakeFiles/sgp4_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sgp4_lib.dir/build.make CMakeFiles/sgp4_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Finished codegen for target sgp4_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Finished codegen for target sgp4_lib"
 .PHONY : CMakeFiles/sgp4_lib.dir/codegen
 
 # clean rule for target.
@@ -135,14 +141,14 @@ CMakeFiles/sgp4_lib.dir/clean:
 CMakeFiles/conjunction_lib.dir/all: CMakeFiles/sgp4_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target conjunction_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target conjunction_lib"
 .PHONY : CMakeFiles/conjunction_lib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/conjunction_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/conjunction_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/conjunction_lib.dir/rule
 
 # Convenience name for target.
@@ -152,7 +158,7 @@ conjunction_lib: CMakeFiles/conjunction_lib.dir/rule
 # codegen rule for target.
 CMakeFiles/conjunction_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conjunction_lib.dir/build.make CMakeFiles/conjunction_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target conjunction_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Finished codegen for target conjunction_lib"
 .PHONY : CMakeFiles/conjunction_lib.dir/codegen
 
 # clean rule for target.
@@ -168,14 +174,14 @@ CMakeFiles/test_socrates.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_socrates.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=30,31 "Built target test_socrates"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=37,38 "Built target test_socrates"
 .PHONY : CMakeFiles/test_socrates.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_socrates.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_socrates.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_socrates.dir/rule
 
 # Convenience name for target.
@@ -185,7 +191,7 @@ test_socrates: CMakeFiles/test_socrates.dir/rule
 # codegen rule for target.
 CMakeFiles/test_socrates.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates.dir/build.make CMakeFiles/test_socrates.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=30,31 "Finished codegen for target test_socrates"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=37,38 "Finished codegen for target test_socrates"
 .PHONY : CMakeFiles/test_socrates.dir/codegen
 
 # clean rule for target.
@@ -201,14 +207,14 @@ CMakeFiles/test_gp_json.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_gp_json.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=26,27 "Built target test_gp_json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=31,32 "Built target test_gp_json"
 .PHONY : CMakeFiles/test_gp_json.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_gp_json.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_gp_json.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_gp_json.dir/rule
 
 # Convenience name for target.
@@ -218,7 +224,7 @@ test_gp_json: CMakeFiles/test_gp_json.dir/rule
 # codegen rule for target.
 CMakeFiles/test_gp_json.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_gp_json.dir/build.make CMakeFiles/test_gp_json.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=26,27 "Finished codegen for target test_gp_json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=31,32 "Finished codegen for target test_gp_json"
 .PHONY : CMakeFiles/test_gp_json.dir/codegen
 
 # clean rule for target.
@@ -234,14 +240,14 @@ CMakeFiles/test_screening.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_screening.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=28,29 "Built target test_screening"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=35,36 "Built target test_screening"
 .PHONY : CMakeFiles/test_screening.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_screening.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_screening.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_screening.dir/rule
 
 # Convenience name for target.
@@ -251,7 +257,7 @@ test_screening: CMakeFiles/test_screening.dir/rule
 # codegen rule for target.
 CMakeFiles/test_screening.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_screening.dir/build.make CMakeFiles/test_screening.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=28,29 "Finished codegen for target test_screening"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=35,36 "Finished codegen for target test_screening"
 .PHONY : CMakeFiles/test_screening.dir/codegen
 
 # clean rule for target.
@@ -267,14 +273,14 @@ CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_socrates_bulk.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=32,33 "Built target test_socrates_bulk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=39,40 "Built target test_socrates_bulk"
 .PHONY : CMakeFiles/test_socrates_bulk.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_socrates_bulk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_socrates_bulk.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_socrates_bulk.dir/rule
 
 # Convenience name for target.
@@ -284,7 +290,7 @@ test_socrates_bulk: CMakeFiles/test_socrates_bulk.dir/rule
 # codegen rule for target.
 CMakeFiles/test_socrates_bulk.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socrates_bulk.dir/build.make CMakeFiles/test_socrates_bulk.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=32,33 "Finished codegen for target test_socrates_bulk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=39,40 "Finished codegen for target test_socrates_bulk"
 .PHONY : CMakeFiles/test_socrates_bulk.dir/codegen
 
 # clean rule for target.
@@ -300,14 +306,14 @@ CMakeFiles/test_cdm_output.dir/all: CMakeFiles/sgp4_lib.dir/all
 CMakeFiles/test_cdm_output.dir/all: CMakeFiles/conjunction_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=24,25 "Built target test_cdm_output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=27,28 "Built target test_cdm_output"
 .PHONY : CMakeFiles/test_cdm_output.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_cdm_output.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_cdm_output.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_cdm_output.dir/rule
 
 # Convenience name for target.
@@ -317,13 +323,79 @@ test_cdm_output: CMakeFiles/test_cdm_output.dir/rule
 # codegen rule for target.
 CMakeFiles/test_cdm_output.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=24,25 "Finished codegen for target test_cdm_output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=27,28 "Finished codegen for target test_cdm_output"
 .PHONY : CMakeFiles/test_cdm_output.dir/codegen
 
 # clean rule for target.
 CMakeFiles/test_cdm_output.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cdm_output.dir/build.make CMakeFiles/test_cdm_output.dir/clean
 .PHONY : CMakeFiles/test_cdm_output.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_pc_methods.dir
+
+# All Build rule for target.
+CMakeFiles/test_pc_methods.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_pc_methods.dir/all: CMakeFiles/conjunction_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=33,34 "Built target test_pc_methods"
+.PHONY : CMakeFiles/test_pc_methods.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_pc_methods.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_pc_methods.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_pc_methods.dir/rule
+
+# Convenience name for target.
+test_pc_methods: CMakeFiles/test_pc_methods.dir/rule
+.PHONY : test_pc_methods
+
+# codegen rule for target.
+CMakeFiles/test_pc_methods.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=33,34 "Finished codegen for target test_pc_methods"
+.PHONY : CMakeFiles/test_pc_methods.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_pc_methods.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pc_methods.dir/build.make CMakeFiles/test_pc_methods.dir/clean
+.PHONY : CMakeFiles/test_pc_methods.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_engine.dir
+
+# All Build rule for target.
+CMakeFiles/test_engine.dir/all: CMakeFiles/sgp4_lib.dir/all
+CMakeFiles/test_engine.dir/all: CMakeFiles/conjunction_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=29,30 "Built target test_engine"
+.PHONY : CMakeFiles/test_engine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 28
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_engine.dir/rule
+
+# Convenience name for target.
+test_engine: CMakeFiles/test_engine.dir/rule
+.PHONY : test_engine
+
+# codegen rule for target.
+CMakeFiles/test_engine.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/CMakeFiles --progress-num=29,30 "Finished codegen for target test_engine"
+.PHONY : CMakeFiles/test_engine.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_engine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_engine.dir/build.make CMakeFiles/test_engine.dir/clean
+.PHONY : CMakeFiles/test_engine.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

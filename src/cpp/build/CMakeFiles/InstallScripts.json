@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/build/cmake_install.cmake"
+		"/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

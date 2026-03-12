@@ -1,7 +1,7 @@
 CMakeFiles/conjunction_lib.dir/src/gp_json.cpp.o: \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h \
-  /Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/src/gp_json.cpp \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/gp_json.h \
+  /Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/include/conjunction/sgp4_propagator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

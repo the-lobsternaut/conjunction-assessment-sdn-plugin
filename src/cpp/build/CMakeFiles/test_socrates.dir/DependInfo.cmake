@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lobsternaut/.openclaw/workspace/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates.cpp" "CMakeFiles/test_socrates.dir/tests/test_socrates.cpp.o" "gcc" "CMakeFiles/test_socrates.dir/tests/test_socrates.cpp.o.d"
+  "/Users/lobsternaut/software/space-data-network-plugins/conjunction-assessment-sdn-plugin/src/cpp/tests/test_socrates.cpp" "CMakeFiles/test_socrates.dir/tests/test_socrates.cpp.o" "gcc" "CMakeFiles/test_socrates.dir/tests/test_socrates.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

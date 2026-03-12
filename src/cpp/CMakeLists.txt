@@ -45,6 +45,9 @@ set(CA_SOURCES
     src/kdtree.cpp
     src/screening.cpp
     src/cdm_output.cpp
+    src/pc_method.cpp
+    src/ephemeris_source.cpp
+    src/conjunction_engine.cpp
 )
 
 add_library(conjunction_lib STATIC ${CA_SOURCES})
@@ -87,6 +90,15 @@ if(NOT EMSCRIPTEN)
         target_include_directories(test_cdm_output PRIVATE include "${SGP4_DIR}"
             "${SDS_ROOT}/packages/flatbuffers/include")
     endif()
+
+    # Pc methods + engine test
+    add_executable(test_pc_methods tests/test_pc_methods.cpp)
+    target_link_libraries(test_pc_methods conjunction_lib)
+    target_include_directories(test_pc_methods PRIVATE include "${SGP4_DIR}")
+
+    add_executable(test_engine tests/test_engine.cpp)
+    target_link_libraries(test_engine conjunction_lib)
+    target_include_directories(test_engine PRIVATE include "${SGP4_DIR}")
 endif()
 
 # ============================================================================
