@@ -281,7 +281,39 @@ void test_custom_covariance() {
     CHECK(e1.pc.probability != e2.pc.probability, "Different covariances → different Pc");
 }
 
-// ── Test 8: Mixed ephemeris sources ──
+// ── Test 8: Mahalanobis distance in engine ──
+
+void test_mahalanobis_engine() {
+    printf("\n=== Test 8: Mahalanobis Distance (Engine) ===\n");
+
+    // Two objects 500m apart, isotropic 100m covariance each
+    StateVector s1 = {2460310.5, 6778.0, 0, 0, 0, 7.669, 0};
+    StateVector s2 = {2460310.5, 6778.5, 0, 0, 0, 7.669, 0};  // 500m apart in X
+
+    // Combined σ = sqrt(2 × 0.1²) = 0.1414 km = 141.4m per axis
+    auto cov = Covariance3x3::from_rtn_diagonal(0.1, 0.1, 0.1);
+
+    ConjunctionEngine engine;
+    engine.set_pc_method("foster");
+
+    auto event = engine.compute_pc(s1, s2, cov, cov, 0.01);
+
+    printf("  Miss: %.3f km\n", event.miss_distance_km);
+    printf("  Mahalanobis 2D: %.3f\n", event.mahalanobis_2d);
+    printf("  Mahalanobis 3D: %.3f\n", event.mahalanobis_3d);
+    printf("  Pc: %.6e\n", event.pc.probability);
+
+    // 500m miss with combined σ = 141m → Md ≈ 3.5
+    CHECK(event.mahalanobis_3d > 2.0, "3D Md > 2.0 (500m miss, 141m combined σ)");
+    CHECK(event.mahalanobis_3d < 5.0, "3D Md < 5.0");
+    CHECK(event.mahalanobis_2d >= 0, "2D Md ≥ 0");
+
+    // PcResult also carries it
+    CHECK_TOL(event.pc.mahalanobis_2d, event.mahalanobis_2d, 1e-10,
+              "PcResult.mahalanobis_2d == event.mahalanobis_2d");
+}
+
+// ── Test 9: Mixed ephemeris sources ──
 
 void test_mixed_sources() {
     printf("\n=== Test 8: Mixed Ephemeris Sources (SGP4 + OEM) ===\n");
@@ -327,6 +359,7 @@ int main() {
     test_compute_pc_only();
     test_v1_v2_cross();
     test_custom_covariance();
+    test_mahalanobis_engine();
     test_mixed_sources();
 
     printf("\n============================================================\n");

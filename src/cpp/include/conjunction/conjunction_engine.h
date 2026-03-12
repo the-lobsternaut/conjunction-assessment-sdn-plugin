@@ -72,6 +72,10 @@ struct ConjunctionEvent2 {
     // B-plane geometry
     BPlaneGeometry bplane;
 
+    // Mahalanobis distance
+    double mahalanobis_2d = 0;   // In encounter plane (from B-plane geometry)
+    double mahalanobis_3d = 0;   // Full 3D (from combined position covariance)
+
     // Collision probability (from chosen method)
     PcResult pc;
 

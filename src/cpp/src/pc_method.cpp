@@ -28,6 +28,7 @@ static constexpr double TWO_PI = 2.0 * PI;
 PcResult AlfanoMaxPc::compute(const BPlaneGeometry& bp) const {
     PcResult r;
     r.method = "ALFANO-MAXPROB";
+    r.mahalanobis_2d = bp.mahalanobis_distance();
 
     double d = bp.miss_distance();
     double Rc = bp.combined_radius;
@@ -52,7 +53,7 @@ PcResult AlfanoMaxPc::compute(const BPlaneGeometry& bp) const {
 PcResult Foster2D::compute(const BPlaneGeometry& bp) const {
     PcResult r;
     r.method = "FOSTER-2D";
-
+    r.mahalanobis_2d = bp.mahalanobis_distance();
     double s1, s2;
     bp.eigen_sigmas(s1, s2);
 
@@ -88,7 +89,7 @@ PcResult Foster2D::compute(const BPlaneGeometry& bp) const {
 PcResult Patera2001::compute(const BPlaneGeometry& bp) const {
     PcResult r;
     r.method = "PATERA-2001";
-
+    r.mahalanobis_2d = bp.mahalanobis_distance();
     double s1, s2;
     bp.eigen_sigmas(s1, s2);
 
@@ -163,6 +164,7 @@ static double bessel_in(int n, double x) {
 PcResult Chan2008::compute(const BPlaneGeometry& bp) const {
     PcResult r;
     r.method = "CHAN-2008";
+    r.mahalanobis_2d = bp.mahalanobis_distance();
 
     double s1, s2;
     bp.eigen_sigmas(s1, s2);
@@ -244,7 +246,7 @@ PcResult Chan2008::compute(const BPlaneGeometry& bp) const {
 PcResult Alfriend2D::compute(const BPlaneGeometry& bp) const {
     PcResult r;
     r.method = "ALFRIEND-2D";
-
+    r.mahalanobis_2d = bp.mahalanobis_distance();
     double s1, s2;
     bp.eigen_sigmas(s1, s2);
 

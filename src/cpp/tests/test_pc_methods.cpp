@@ -228,6 +228,65 @@ void test_factory() {
     CHECK(m6->name() == "FOSTER-2D", "Factory: unknown → default Foster");
 }
 
+// ── Test 8: Mahalanobis Distance ──
+
+void test_mahalanobis() {
+    printf("\n=== Test 8: Mahalanobis Distance ===\n");
+
+    // Case 1: Miss at 1 sigma in isotropic covariance
+    BPlaneGeometry bp1;
+    bp1.xi = 0.1; bp1.zeta = 0;
+    bp1.sigma_xx = 0.01;  // σ = 100m
+    bp1.sigma_xz = 0;
+    bp1.sigma_zz = 0.01;  // σ = 100m
+    bp1.combined_radius = 0.01;
+
+    double md1 = bp1.mahalanobis_distance();
+    printf("  100m miss, 100m σ isotropic: Md = %.3f\n", md1);
+    CHECK_TOL(md1, 1.0, 0.01, "Md = 1.0 at 1σ miss (isotropic)");
+
+    // Case 2: Miss at 3 sigma
+    BPlaneGeometry bp2;
+    bp2.xi = 0.3; bp2.zeta = 0;
+    bp2.sigma_xx = 0.01; bp2.sigma_zz = 0.01;
+    double md2 = bp2.mahalanobis_distance();
+    printf("  300m miss, 100m σ: Md = %.3f\n", md2);
+    CHECK_TOL(md2, 3.0, 0.01, "Md = 3.0 at 3σ miss");
+
+    // Case 3: Elliptical covariance — miss along minor axis
+    BPlaneGeometry bp3;
+    bp3.xi = 0.1; bp3.zeta = 0;
+    bp3.sigma_xx = 0.01;   // σ_x = 100m (tight)
+    bp3.sigma_xz = 0;
+    bp3.sigma_zz = 1.0;    // σ_z = 1km (wide)
+    double md3 = bp3.mahalanobis_distance();
+    printf("  100m miss along tight axis (σ=100m, σ=1km): Md = %.3f\n", md3);
+    CHECK_TOL(md3, 1.0, 0.01, "Md = 1.0 along minor axis");
+
+    // Case 4: Same miss along wide axis
+    BPlaneGeometry bp4;
+    bp4.xi = 0; bp4.zeta = 0.1;  // miss along wide axis
+    bp4.sigma_xx = 0.01;
+    bp4.sigma_xz = 0;
+    bp4.sigma_zz = 1.0;
+    double md4 = bp4.mahalanobis_distance();
+    printf("  100m miss along wide axis (σ=1km): Md = %.3f\n", md4);
+    CHECK(md4 < 0.15, "Md < 0.15 (miss along wide axis, well within 1σ)");
+
+    // Case 5: Zero miss
+    BPlaneGeometry bp5;
+    bp5.xi = 0; bp5.zeta = 0;
+    bp5.sigma_xx = 0.01; bp5.sigma_zz = 0.01;
+    double md5 = bp5.mahalanobis_distance();
+    CHECK_TOL(md5, 0.0, 1e-10, "Md = 0 at zero miss");
+
+    // Case 6: Mahalanobis stored in PcResult
+    auto foster = std::make_unique<Foster2D>();
+    auto r = foster->compute(bp1);
+    printf("  PcResult.mahalanobis_2d = %.3f\n", r.mahalanobis_2d);
+    CHECK_TOL(r.mahalanobis_2d, 1.0, 0.01, "PcResult carries Mahalanobis distance");
+}
+
 // ── Test 7: Overlapping hard bodies ──
 
 void test_overlapping() {
@@ -256,6 +315,7 @@ int main() {
     test_elliptical_cov();
     test_factory();
     test_overlapping();
+    test_mahalanobis();
 
     printf("\n============================================================\n");
     printf("Results: %d passed, %d failed\n", tests_passed, tests_failed);

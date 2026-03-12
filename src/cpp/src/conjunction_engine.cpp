@@ -74,6 +74,41 @@ static void mat_vec(const double M[9], const double v[3], double out[3]) {
 // R^T × C × R for 3×3 rotation and covariance → 2×2 projection
 // R is 3×2 (two columns = encounter-plane basis vectors)
 
+// 3D Mahalanobis distance: Md = sqrt(Δr^T × C_combined⁻¹ × Δr)
+static double mahalanobis_3d(const double dr[3], const Covariance3x3& c1, const Covariance3x3& c2) {
+    // Combined covariance
+    double C[9];
+    for (int i = 0; i < 9; i++) C[i] = c1.data[i] + c2.data[i];
+
+    // Invert 3×3 symmetric matrix
+    double a = C[0], b = C[1], c = C[2];
+    double d = C[3], e = C[4], f = C[5];
+    double g = C[6], h = C[7], k = C[8];
+
+    double det = a*(e*k - f*h) - b*(d*k - f*g) + c*(d*h - e*g);
+    if (std::abs(det) < 1e-30) return 0;
+
+    double inv[9];
+    inv[0] = (e*k - f*h) / det;
+    inv[1] = (c*h - b*k) / det;
+    inv[2] = (b*f - c*e) / det;
+    inv[3] = (f*g - d*k) / det;
+    inv[4] = (a*k - c*g) / det;
+    inv[5] = (c*d - a*f) / det;
+    inv[6] = (d*h - e*g) / det;
+    inv[7] = (b*g - a*h) / det;
+    inv[8] = (a*e - b*d) / det;
+
+    // Md² = Δr^T × C⁻¹ × Δr
+    double Cinv_dr[3];
+    Cinv_dr[0] = inv[0]*dr[0] + inv[1]*dr[1] + inv[2]*dr[2];
+    Cinv_dr[1] = inv[3]*dr[0] + inv[4]*dr[1] + inv[5]*dr[2];
+    Cinv_dr[2] = inv[6]*dr[0] + inv[7]*dr[1] + inv[8]*dr[2];
+
+    double md2 = dr[0]*Cinv_dr[0] + dr[1]*Cinv_dr[1] + dr[2]*Cinv_dr[2];
+    return (md2 > 0) ? std::sqrt(md2) : 0;
+}
+
 static double distance_at(const EphemerisSource& o1, const EphemerisSource& o2, double jd) {
     auto s1 = o1.state_at(jd);
     auto s2 = o2.state_at(jd);
@@ -274,6 +309,15 @@ ConjunctionEvent2 ConjunctionEngine::assess(
                                  event.combined_radius_km);
     event.pc = pc_method_->compute(event.bplane);
 
+    // Mahalanobis distances
+    event.mahalanobis_2d = event.bplane.mahalanobis_distance();
+    double dr[3] = {
+        event.state1.x - event.state2.x,
+        event.state1.y - event.state2.y,
+        event.state1.z - event.state2.z
+    };
+    event.mahalanobis_3d = mahalanobis_3d(dr, event.cov1, event.cov2);
+
     return event;
 }
 
@@ -317,6 +361,11 @@ ConjunctionEvent2 ConjunctionEngine::compute_pc(
 
     event.bplane = build_bplane(state1, state2, cov1, cov2, combined_radius_km);
     event.pc = pc_method_->compute(event.bplane);
+
+    // Mahalanobis distances
+    event.mahalanobis_2d = event.bplane.mahalanobis_distance();
+    double dr[3] = {state1.x - state2.x, state1.y - state2.y, state1.z - state2.z};
+    event.mahalanobis_3d = mahalanobis_3d(dr, cov1, cov2);
 
     return event;
 }

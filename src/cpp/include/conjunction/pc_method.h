@@ -49,6 +49,35 @@ struct BPlaneGeometry {
     // Miss distance magnitude (km)
     double miss_distance() const { return std::sqrt(xi * xi + zeta * zeta); }
 
+    // ── Mahalanobis Distance (2D, encounter plane) ──
+    // Md = sqrt(Δr^T × C⁻¹ × Δr)  in the B-plane
+    // Tells you how many "sigma" the miss is from the covariance center
+    double mahalanobis_distance() const {
+        double det = sigma_xx * sigma_zz - sigma_xz * sigma_xz;
+        if (det < 1e-30) return 0;
+        // C⁻¹ = (1/det) × [σ_zz, -σ_xz; -σ_xz, σ_xx]
+        double inv_xx = sigma_zz / det;
+        double inv_xz = -sigma_xz / det;
+        double inv_zz = sigma_xx / det;
+        double md2 = xi * xi * inv_xx + 2.0 * xi * zeta * inv_xz + zeta * zeta * inv_zz;
+        return (md2 > 0) ? std::sqrt(md2) : 0;
+    }
+
+    // Mahalanobis distance along principal axes
+    double mahalanobis_principal() const {
+        double s1, s2;
+        double l1, l2;
+        eigenvalues(l1, l2);
+        s1 = (l1 > 0) ? l1 : 1e-30;
+        s2 = (l2 > 0) ? l2 : 1e-30;
+        double u, v;
+        double theta = rotation_angle();
+        double ct = std::cos(theta), st = std::sin(theta);
+        u = ct * xi + st * zeta;
+        v = -st * xi + ct * zeta;
+        return std::sqrt(u * u / s1 + v * v / s2);
+    }
+
     // Covariance eigenvalues
     void eigenvalues(double& lambda1, double& lambda2) const {
         double trace = sigma_xx + sigma_zz;
@@ -90,6 +119,7 @@ struct PcResult {
     bool converged = true;
     int iterations = 0;          // for iterative methods
     double max_probability = 0;  // Alfano upper bound (always computed)
+    double mahalanobis_2d = 0;   // Mahalanobis distance in encounter plane
 };
 
 // ── Abstract Interface ──
